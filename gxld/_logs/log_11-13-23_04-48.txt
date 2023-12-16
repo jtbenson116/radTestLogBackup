@@ -1,0 +1,52 @@
+Starting GXLD test...
+Iteration 1 of 1
+Mon 13 Nov 2023 04:48:51 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850931
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 43.1775
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+GSI Leda-G SSH
+Starting................
+Version: 100.12.0.1.1000.25
+Not Connected
+> init ok
+Exception on scan_pci: 'error'
+[1m[33mslot0[0m {'Apuc_Mask': '0xf', 'Dev_Name': 'dev-5e00', 'File_Name': '/dev/apu/mngt/m00', 'Log_State': 'Card Not Responsive', 'Mem_Size': '15027142656'}
+Slot not Connected
+Connected
+flf
+Slot not Connected
+quit
+Test complete.
