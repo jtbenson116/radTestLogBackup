@@ -26,6 +26,18 @@ struct gd_lab_0_cmd {
 	} __attribute__((packed));
 } __attribute__((packed));
 
+struct common_dev_host {
+    // Inputs
+    uint64_t 		in_mem_hndl1;
+    uint64_t            in_mem_hndl2;
+    int                 vr_size;
+    int                 num_vrs;
+    int                 vr_to_check;
+    
+    // Outputs
+    uint64_t 		out_mem_hndl1;
+}__attribute__((packed));;
+
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

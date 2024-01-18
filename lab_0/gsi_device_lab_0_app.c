@@ -10,6 +10,9 @@
 GDL_TASK_DECLARE(gd_lab_0);
 #include "gsi_device_lab_0.h"
 
+enum { VR_SIZE = 32768 };
+enum { num_vrs = 14 };
+
 static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 {
 	struct gd_lab_0_cmd cmd = {
@@ -21,6 +24,23 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 		}
 	};
 	printf("BEFORE TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
+
+// Jacob Changes
+	// initialize "common_dev_host" from header file
+	    size_t buf_size = sizeof(struct common_dev_host);
+    gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size,
+								GDL_CONST_MAPPED_POOL);
+    struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
+	    uint vr_size_in_bytes = VR_SIZE * sizeof(uint16_t);
+    cmn_handle->in_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes,
+						    GDL_CONST_MAPPED_POOL);
+    cmn_handle->out_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes,
+						     GDL_CONST_MAPPED_POOL);
+    // The device also needs to know the number of vrs to check and the size of
+    // each of the vrs.
+    cmn_handle->num_vrs = num_vrs;
+    cmn_handle->vr_size = VR_SIZE;
+
 
 	uint64_t cmd_buf_size = sizeof(cmd);
 	gdl_mem_handle_t dev_cmd_buf = gdl_mem_alloc_aligned(
