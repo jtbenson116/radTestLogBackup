@@ -27,7 +27,7 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 
 // Jacob Changes
 	// initialize "common_dev_host" from header file
-	    size_t buf_size = sizeof(struct common_dev_host);
+	size_t buf_size = sizeof(struct common_dev_host);
     gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size,
 								GDL_CONST_MAPPED_POOL);
     struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
@@ -40,6 +40,7 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
     // each of the vrs.
     cmn_handle->num_vrs = num_vrs;
     cmn_handle->vr_size = VR_SIZE;
+	cmn_handle->cmd = GD_LAB_0_CMD_HELLO_WORLD;
 
 
 	uint64_t cmd_buf_size = sizeof(cmd);
@@ -64,7 +65,7 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 	ret = gdl_run_task_timeout(
 		ctx_id,					/* @ctx_handler - the id of a hardware context previously allocated */
 	        GDL_TASK(gd_lab_0),			/* @code_offset - the code offset of the function that the task should execute */
-	        dev_cmd_buf,				/* @inp - input memory handle */
+	        cmn_struct_mem_hndl,				/* @inp - input memory handle */
 	        GDL_MEM_HANDLE_NULL,			/* @outp - output memory handle */
 	        GDL_TEMPORARY_DEFAULT_MEM_BUF,		/* @mem_buf - an array of previously allocated memory handles and their sizes */
 	        GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,	/* @buf_size - the length of the mem_buf array */

@@ -28,6 +28,7 @@ struct gd_lab_0_cmd {
 
 struct common_dev_host {
     // Inputs
+	uint32_t 		cmd;
     uint64_t 		in_mem_hndl1;
     uint64_t            in_mem_hndl2;
     int                 vr_size;
