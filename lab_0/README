@@ -1,0 +1,52 @@
+----------------------------------------------------------------------------
+ LAB 0 README
+-----------------------------------------------------------------------------
+
+This lab requires the following prerequisites:
+- Device drivers, fw and libs are properly installed
+- GVML libs are properly installed
+
+This lab's purpose is to introduce the development environment to the user. By the end of the lab the user should understand:
+- how to use ledag-ssh: inspecting APU boards connected to the host machine, rebooting them, configuring them etc.
+- program flow:
+    - defining an interface between the device and the host machine
+    - using the GDL to send tasks from the host machine to the device and to retrieve the results from the device
+- how to debug: using minicom (or ledag-ssh if minicom is not available) to view logs from the device
+
+File structure:
+lab_0
+├── arc_module_example.lcf  # used to build the lab (don't edit this file)
+├── arc.tcf                 # used to build the lab (don't edit this file)
+├── dev_src                 # directory for all device-side source files
+│   ├── gsi_device_lab_0.c  
+│   └── include             # include directory for all device-side internal headers
+│       └── stub
+├── gsi_device_lab_0_app.c  # the host-side source file
+├── gsi_device_lab_0.h      # header file describing the interface between the host and the device
+├── Makefile
+└── README
+
+This lab contains a Makefile to build gsi_device_lab_0. You can choose to build in debug (make mode=debug) or release mode (make mode=release).
+Calling make mode=debug will create a build directory with the following structure:
+
+build/
+└── debug
+    ├── gsi_device_lab_0              # the lab's executable
+    ├── gsi_device_lab_0.a
+    ├── gsi_device_lab_0_apuc_code.o
+    ├── gsi_device_lab_0.bin
+    ├── gsi_device_lab_0_defs.c
+    ├── gsi_device_lab_0_defs.h
+    ├── gsi_device_lab_0.mod
+    ├── gsi_device_lab_0_module.o
+    └── gsi_device_lab_0.s
+
+To run the lab on the host machine,
+  ./gsi_device_lab_0
+
+This lab is accompanied by an online recording / presentation.
+The slide show used in this presentation can be found in lab_0_slideshow.pdf.
+
+This lab's relevant git tags are:
+Directory	ANNOTATION
+lab_0           Lab 0: understanding program flow and setting up a development environment
