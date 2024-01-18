@@ -31,7 +31,7 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
     gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size,
 								GDL_CONST_MAPPED_POOL);
     struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
-	    uint vr_size_in_bytes = VR_SIZE * sizeof(uint16_t);
+	uint vr_size_in_bytes = VR_SIZE * sizeof(uint16_t);
     cmn_handle->in_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes,
 						    GDL_CONST_MAPPED_POOL);
     cmn_handle->out_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes,
@@ -41,7 +41,6 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
     cmn_handle->num_vrs = num_vrs;
     cmn_handle->vr_size = VR_SIZE;
 	cmn_handle->cmd = GD_LAB_0_CMD_HELLO_WORLD;
-
 
 	uint64_t cmd_buf_size = sizeof(cmd);
 	gdl_mem_handle_t dev_cmd_buf = gdl_mem_alloc_aligned(
@@ -79,13 +78,15 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 		goto CLEAN_UP;
 	}
 
-	ret = gdl_mem_cpy_from_dev(&cmd, dev_cmd_buf, cmd_buf_size);
+	ret = gdl_mem_cpy_from_dev(&cmn_handle, cmn_struct_mem_hndl, buf_size);
 	if (ret) {
+		printf("jacob is dumb\n");
 		gsi_error("gdl_mem_cpy_from_dev() failed: %s", gsi_status_errorstr(ret));
 		goto CLEAN_UP;
 	}
 
 	printf("AFTER TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
+	printf("REAL AFTER: common_dev_host->vr_size = %d\n", cmn_handle->vr_size);
 
 CLEAN_UP:
 	gdl_mem_free(dev_cmd_buf);
