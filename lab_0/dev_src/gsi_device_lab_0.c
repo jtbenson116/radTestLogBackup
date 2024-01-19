@@ -14,8 +14,8 @@ static int hello_world(struct common_dev_host *hello_world_data)
 	// hello_world_data->an_int = 18;
 	// hello_world_data->an_int_two = 69420;
 	// strcpy(hello_world_data->a_char_array, "Hello Host!");
-	gsi_info("vr_size = %d", hello_world_data->vr_size);
-	printf("hello world\n");
+	// gsi_info("vr_size = %d", hello_world_data->vr_size);
+	//printf("hello world\n");
 	hello_world_data->vr_size = 420;
 	return 0;
 }
@@ -29,7 +29,9 @@ GAL_TASK_ENTRY_POINT(gd_lab_0, in, out)
 	switch (cmd->cmd) {
 	case GD_LAB_0_CMD_HELLO_WORLD:
 		// ret = hello_world(&cmd->hello_world_data);
-		ret = hello_world(&cmd->num_vrs);
+		//GW ret = hello_world(&cmd->num_vrs);
+		ret = hello_world(cmd);
+		//GW
 		break;
 	default:
 		gsi_fatal("%s: unknown command %d\n", __func__, (int )cmd->cmd);	/* aborts execution */

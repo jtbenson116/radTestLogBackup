@@ -15,6 +15,7 @@ enum { num_vrs = 14 };
 
 static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 {
+	/*GW
 	struct gd_lab_0_cmd cmd = {
 		.cmd = GD_LAB_0_CMD_HELLO_WORLD,
 		.hello_world_data = {
@@ -24,6 +25,13 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 		}
 	};
 	printf("BEFORE TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
+	*/
+
+	//GW
+	struct common_dev_host cmd = {
+		.cmd = GD_LAB_0_CMD_HELLO_WORLD,
+	};
+	//GW
 
 // Jacob Changes
 	// initialize "common_dev_host" from header file
@@ -53,7 +61,7 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 		return gsi_status(ENOMEM);
 	}
 
-	cmd.hello_world_data.a_mem_hndl = dev_cmd_buf;
+	//cmd.hello_world_data.a_mem_hndl = dev_cmd_buf;
 
 	int ret = gdl_mem_cpy_to_dev(dev_cmd_buf, &cmd, cmd_buf_size);
 	if (ret) {
@@ -85,8 +93,8 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 		goto CLEAN_UP;
 	}
 
-	printf("AFTER TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
-	printf("REAL AFTER: common_dev_host->vr_size = %d\n", cmn_handle->vr_size);
+	//GW printf("AFTER TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
+	//GW printf("REAL AFTER: common_dev_host->vr_size = %d\n", cmn_handle->vr_size);
 
 CLEAN_UP:
 	gdl_mem_free(dev_cmd_buf);
