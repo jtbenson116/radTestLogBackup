@@ -8,35 +8,19 @@ extern "C" {
 #include <stdint.h>
 
 enum gd_lab_0_cmd_type {
-	GD_LAB_0_CMD_HELLO_WORLD,
-	GD_LAB_0_NUM_CMDS
+	GD_LAB_0_ADD_1
 };
 
-struct gd_lab_0_hello_world_data {
-	int32_t an_int;
-	int32_t an_int_two;
-	char a_char_array[64];
-	uint64_t a_mem_hndl;	/* gdl_mem_handle_t(host) / gal_mem_handle_t(dev) */
-} __attribute__((packed));
-
-struct gd_lab_0_cmd {
-	uint32_t	cmd;
-	union 	{
-		struct gd_lab_0_hello_world_data hello_world_data;
-	} __attribute__((packed));
-} __attribute__((packed));
-
 struct common_dev_host {
-    // Inputs
-	uint32_t 		cmd;
-    uint64_t 		in_mem_hndl1;
-    uint64_t            in_mem_hndl2;
-    int                 vr_size;
-    int                 num_vrs;
-    int                 vr_to_check;
-    
-    // Outputs
-    uint64_t 		out_mem_hndl1;
+    	// Inputs
+	uint32_t 	cmd;
+    	uint64_t 	in_mem_hndl1;
+    	uint64_t        in_mem_hndl2;
+    	int             vr_size;
+    	int             num_vrs;
+    	int             vr_to_check;
+    	// Outputs
+    	uint64_t 	out_mem_hndl1;
 }__attribute__((packed));;
 
 #ifdef __cplusplus

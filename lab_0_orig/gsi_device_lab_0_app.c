@@ -6,41 +6,45 @@
 #include <gsi/libsys.h>
 
 #include <gsi/gsi_sim_config.h>
+
 GDL_TASK_DECLARE(gd_lab_0);
 #include "gsi_device_lab_0.h"
 
-enum { VR_SIZE = 32768 };
-enum { num_vrs = 14 };
-
 static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 {
+	struct gd_lab_0_cmd cmd = {
+		.cmd = GD_LAB_0_CMD_HELLO_WORLD,
+		.hello_world_data = {
+				.an_int = 613,
+				.an_int_two = 42069,
+				.a_char_array = "Hello Device!",
+		}
+	};
+	printf("BEFORE TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
 
-	//
-	// Prep the memory handles and cmd structure
-	//
-	size_t buf_size = sizeof(struct common_dev_host);
-    	gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size, GDL_CONST_MAPPED_POOL);
-    	struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
-	uint vr_size_in_bytes = VR_SIZE * sizeof(uint16_t);
-    	cmn_handle->in_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
-	cmn_handle->out_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
-	
-	//
-	// Prepare input data to APU - initialize all elements to a value
-	//
-	uint16_t *in = malloc(VR_SIZE * sizeof(uint16_t));
-    	for(size_t j = 0; j < VR_SIZE; j++){
-        	in[j] = 2;
-    	}
+	uint64_t cmd_buf_size = sizeof(cmd);
+	gdl_mem_handle_t dev_cmd_buf = gdl_mem_alloc_aligned(
+		ctx_id,				/* @ctx_handler - the requested hw context to allocate from. */
+		cmd_buf_size,			/* @size - number of bytes to allocate in the memory region. ( size is aligned up to a multiple of 16) */
+		GDL_CONST_MAPPED_POOL,		/* @pool - the requested memory pool to allocate the memory on */
+		GDL_ALIGN_32);			/* @alignment - specifies the alignment as shown in gdl_alloc_alignment enum. */
+	if (gdl_mem_handle_is_null(dev_cmd_buf)) {
+		gsi_error("gdl_mem_alloc() failed to allocate %lu bytes", cmd_buf_size);
+		return gsi_status(ENOMEM);
+	}
 
-	//
-	// Send to APU
-	//
-	gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in, vr_size_in_bytes);
-	int ret = gdl_run_task_timeout(
+	cmd.hello_world_data.a_mem_hndl = dev_cmd_buf;
+
+	int ret = gdl_mem_cpy_to_dev(dev_cmd_buf, &cmd, cmd_buf_size);
+	if (ret) {
+		gsi_error("gdl_mem_cpy_to_dev() failed: %s", gsi_status_errorstr(ret));
+		goto CLEAN_UP;
+	}
+
+	ret = gdl_run_task_timeout(
 		ctx_id,					/* @ctx_handler - the id of a hardware context previously allocated */
 	        GDL_TASK(gd_lab_0),			/* @code_offset - the code offset of the function that the task should execute */
-	        cmn_struct_mem_hndl,			/* @inp - input memory handle */
+	        dev_cmd_buf,				/* @inp - input memory handle */
 	        GDL_MEM_HANDLE_NULL,			/* @outp - output memory handle */
 	        GDL_TEMPORARY_DEFAULT_MEM_BUF,		/* @mem_buf - an array of previously allocated memory handles and their sizes */
 	        GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,	/* @buf_size - the length of the mem_buf array */
@@ -48,35 +52,22 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 	        NULL,					/* @comp - if task was successfully scheduled, and @comp is provided, the task completion status, or any error is returned in comp. */
 	        0,					/* @ms_timeout - the time in mili-seconds a task should wait for completion before aborting (0 indicates waiting indefinitely) */
 	        GDL_USER_MAPPING);			/* @map_type - determine the mapping type for the specific task */
+
 	if (ret) {
 		gsi_error("gdl_run_task_timeout() failed: %s", gsi_status_errorstr(ret));
 		goto CLEAN_UP;
 	}
-	printf("Ret from APU task=%d\n", ret);
 
-	//
-	// Prep array for copying from APU
-	//
-	uint16_t *out = malloc(VR_SIZE * sizeof(uint16_t));
-        for(size_t j = 0; j < VR_SIZE; j++){
-                out[j] = 0;
-        }
-
-	//
-	// Extract output from APU
-	//
-	ret = gdl_mem_cpy_from_dev(out, cmn_handle->out_mem_hndl1, vr_size_in_bytes);
+	ret = gdl_mem_cpy_from_dev(&cmd, dev_cmd_buf, cmd_buf_size);
 	if (ret) {
-		printf("read error\n");
 		gsi_error("gdl_mem_cpy_from_dev() failed: %s", gsi_status_errorstr(ret));
 		goto CLEAN_UP;
 	}
-	printf("Got data from APU task: %hu %hu\n", out[0], out[1]);
 
-	printf("App Done.");
+	printf("AFTER TASK: an_int = %d, jacob's int = %d, a_char_array = %s\n", cmd.hello_world_data.an_int, cmd.hello_world_data.an_int_two, cmd.hello_world_data.a_char_array);
 
 CLEAN_UP:
-	gdl_mem_free(cmn_struct_mem_hndl);
+	gdl_mem_free(dev_cmd_buf);
 
 	return ret;
 }
