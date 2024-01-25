@@ -63,8 +63,9 @@ GAL_TASK_ENTRY_POINT(populate_task, in, out){
     // Copy the pattern in A to each vm_reg up to GVML_VM_47. That is, num_vrs
     // must always be <= 48.
     enum gvml_vm_reg vm_reg;
-    for (vm_reg = GVML_VM_0; vm_reg <= GVML_VM_47; vm_reg++)
-	my_dma_l2_to_l1_32k(vm_reg);
+    for (vm_reg = GVML_VM_0; vm_reg <= GVML_VM_47; vm_reg++){
+	    my_dma_l2_to_l1_32k(vm_reg);
+    }
 
     // On the device, there are 16 GVML VRs (GVML_VR16_0 through GVML_VR16_IDX), but
     // we cannot access the last one as it is reserved for system ops. Thus, we only
@@ -73,12 +74,12 @@ GAL_TASK_ENTRY_POINT(populate_task, in, out){
     enum gvml_vr16 X_vr;
     enum gvml_mrks_n_flgs validMarks;
     for(X_vr = GVML_VR16_0; X_vr <= GVML_VR16_14; X_vr++){
-	gvml_load_16(X_vr, vm_reg);
-	// Try doing an arithmetic thing to prevent the compiler from optimizing this out
-	gvml_set_m(validMarks);
-	// lets increment all the values by 1.
-	gvml_inc_u16_mrk(X_vr, X_vr, validMarks);
-	//gvml_cpy_16(X_vr, X_vr);
+        gvml_load_16(X_vr, vm_reg);
+        // Try doing an arithmetic thing to prevent the compiler from optimizing this out
+        gvml_set_m(validMarks);
+        // lets increment all the values by 1.
+        gvml_inc_u16_mrk(X_vr, X_vr, validMarks);
+        //gvml_cpy_16(X_vr, X_vr);
 	
     }
 

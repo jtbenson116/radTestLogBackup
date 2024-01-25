@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #include <gsi/libgdl.h>
 #include <gsi/libsys.h>
@@ -10,7 +11,7 @@ GDL_TASK_DECLARE(gd_lab_0);
 #include "gsi_device_lab_0.h"
 
 enum { VR_SIZE = 32768 };
-enum { num_vrs = 14 };
+enum { NUM_VRS = 14 };
 
 static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 {
@@ -19,35 +20,35 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 	// Prep the memory handles and cmd structure
 	//
 	size_t buf_size = sizeof(struct common_dev_host);
-    	gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size, GDL_CONST_MAPPED_POOL);
-    	struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
+	gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size, GDL_CONST_MAPPED_POOL);
+	struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
 	uint vr_size_in_bytes = VR_SIZE * sizeof(uint16_t);
-    	cmn_handle->in_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
+	cmn_handle->in_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
 	cmn_handle->out_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
 	
 	//
 	// Prepare input data to APU - initialize all elements to a value
 	//
 	uint16_t *in = malloc(VR_SIZE * sizeof(uint16_t));
-    	for(size_t j = 0; j < VR_SIZE; j++){
-        	in[j] = 2;
-    	}
+	for(size_t j = 0; j < VR_SIZE; j++){
+		in[j] = 2;
+	}
 
 	//
-	// Send to APU
+	// Send to APUnum_vrs
 	//
 	gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in, vr_size_in_bytes);
 	int ret = gdl_run_task_timeout(
 		ctx_id,					/* @ctx_handler - the id of a hardware context previously allocated */
-	        GDL_TASK(gd_lab_0),			/* @code_offset - the code offset of the function that the task should execute */
-	        cmn_struct_mem_hndl,			/* @inp - input memory handle */
-	        GDL_MEM_HANDLE_NULL,			/* @outp - output memory handle */
-	        GDL_TEMPORARY_DEFAULT_MEM_BUF,		/* @mem_buf - an array of previously allocated memory handles and their sizes */
-	        GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,	/* @buf_size - the length of the mem_buf array */
-	        GDL_TEMPORARY_DEFAULT_CORE_INDEX,	/* @apuc_idx - the apuc that the task should be executed on */
-	        NULL,					/* @comp - if task was successfully scheduled, and @comp is provided, the task completion status, or any error is returned in comp. */
-	        0,					/* @ms_timeout - the time in mili-seconds a task should wait for completion before aborting (0 indicates waiting indefinitely) */
-	        GDL_USER_MAPPING);			/* @map_type - determine the mapping type for the specific task */
+		GDL_TASK(gd_lab_0),			/* @code_offset - the code offset of the function that the task should execute */
+		cmn_struct_mem_hndl,			/* @inp - input memory handle */
+		GDL_MEM_HANDLE_NULL,			/* @outp - output memory handle */
+		GDL_TEMPORARY_DEFAULT_MEM_BUF,		/* @mem_buf - an array of previously allocated memory handles and their sizes */
+		GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,	/* @buf_size - the length of the mem_buf array */
+		GDL_TEMPORARY_DEFAULT_CORE_INDEX,	/* @apuc_idx - the apuc that the task should be executed on */
+		NULL,					/* @comp - if task was successfully scheduled, and @comp is provided, the task completion status, or any error is returned in comp. */
+		0,					/* @ms_timeout - the time in mili-seconds a task should wait for completion before aborting (0 indicates waiting indefinitely) */
+		GDL_USER_MAPPING);			/* @map_type - determine the mapping type for the specific task */
 	if (ret) {
 		gsi_error("gdl_run_task_timeout() failed: %s", gsi_status_errorstr(ret));
 		goto CLEAN_UP;
@@ -58,9 +59,9 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 	// Prep array for copying from APU
 	//
 	uint16_t *out = malloc(VR_SIZE * sizeof(uint16_t));
-        for(size_t j = 0; j < VR_SIZE; j++){
-                out[j] = 0;
-        }
+	for(size_t j = 0; j < VR_SIZE; j++){
+		out[j] = 0;
+	}
 
 	//
 	// Extract output from APU
@@ -72,6 +73,98 @@ static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
 		goto CLEAN_UP;
 	}
 	printf("Got data from APU task: %hu %hu\n", out[0], out[1]);
+
+	printf("App Done.");
+
+CLEAN_UP:
+	gdl_mem_free(cmn_struct_mem_hndl);
+
+	return ret;
+}
+
+// 
+// JB: copy function
+// 
+static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
+	// memory handles and cmd structure
+	size_t buf_size = sizeof(struct common_dev_host);
+	gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size, GDL_CONST_MAPPED_POOL);
+	struct common_dev_host *cmn_handle = gdl_mem_handle_to_host_ptr(cmn_struct_mem_hndl);
+	uint vr_size_in_bytes = VR_SIZE * sizeof(uint16_t);
+	cmn_handle->in_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
+	cmn_handle->out_mem_hndl1 = gdl_mem_alloc_nonull(ctx_id, vr_size_in_bytes, GDL_CONST_MAPPED_POOL);
+	cmn_handle->cmd = GVML_WRITE;
+	cmn_handle->vr_size = VR_SIZE;
+	cmn_handle->num_vrs = NUM_VRS;
+
+	// prepare input data for APU
+	uint16_t *in = malloc(VR_SIZE * sizeof(uint16_t));
+	for (size_t j = 0; j < VR_SIZE; j++) {
+		in[j] = rand() % 105;
+	}
+	printf("In data for APU task: %hu %hu %hu\n", in[0], in[1], in[2]);
+
+	// send input data to APU
+	gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in, vr_size_in_bytes);
+	int ret = gdl_run_task_timeout(
+		ctx_id,
+		GDL_TASK(gd_lab_0),
+		cmn_struct_mem_hndl,
+		GDL_MEM_HANDLE_NULL,
+		GDL_TEMPORARY_DEFAULT_MEM_BUF,
+		GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,
+		GDL_TEMPORARY_DEFAULT_CORE_INDEX,
+		NULL,
+		0,
+		GDL_USER_MAPPING
+	);
+
+	// prepare array for "out" data from APU
+	uint16_t *out = malloc(VR_SIZE * sizeof(uint16_t));
+	for (size_t j = 0; j < VR_SIZE; j++) {
+		out[j] = 0; // fill "out" array with zeros
+	}
+
+	// extract output from APU
+	ret = gdl_mem_cpy_from_dev(out, cmn_handle->out_mem_hndl1, vr_size_in_bytes);
+	if (ret) {
+		printf("read error\n");
+		gsi_error("gdl_mem_cpy_from_dev() failed: %s", gsi_status_errorstr(ret));
+		goto CLEAN_UP;
+	}
+	printf("Got data from APU task: %hu %hu %hu\n", out[0], out[1], out[2]);
+
+	// 
+	// READ data from APU
+	// 
+
+	cmn_handle->cmd = GVML_READ;
+	gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in, vr_size_in_bytes);
+	int ret_read = gdl_run_task_timeout(
+		ctx_id,
+		GDL_TASK(gd_lab_0),
+		cmn_struct_mem_hndl,
+		GDL_MEM_HANDLE_NULL,
+		GDL_TEMPORARY_DEFAULT_MEM_BUF,
+		GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,
+		GDL_TEMPORARY_DEFAULT_CORE_INDEX,
+		NULL,
+		0,
+		GDL_USER_MAPPING
+	);
+	uint16_t *out_read = malloc(VR_SIZE * sizeof(uint16_t));
+	for (size_t j = 0; j < VR_SIZE; j++) {
+		out_read[j] = 0; // fill "out" array with zeros
+	}
+
+	// extract output from APU
+	ret_read = gdl_mem_cpy_from_dev(out_read, cmn_handle->out_mem_hndl1, vr_size_in_bytes);
+	if (ret_read) {
+		printf("read error\n");
+		gsi_error("gdl_mem_cpy_from_dev() failed: %s", gsi_status_errorstr(ret));
+		goto CLEAN_UP;
+	}
+	printf("Got data from APU task: %hu %hu %hu\n", out_read[0], out_read[1], out_read[2]);
 
 	printf("App Done.");
 
@@ -144,7 +237,8 @@ int main(int GSI_UNUSED(argc), char *argv[])
 		gsi_fatal("gdl_context_alloc failed: %s", gsi_status_errorstr(ret));
 	}
 
-	ret = run_lab_0_cmd(valid_ctx_id);
+	// ret = run_lab_0_cmd(valid_ctx_id);run_lab_0_cmd_copy
+	ret = run_lab_0_cmd_copy(valid_ctx_id);
 
 	gdl_context_free(valid_ctx_id);
 
