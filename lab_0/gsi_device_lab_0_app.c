@@ -85,7 +85,8 @@ CLEAN_UP:
 // 
 // JB: copy function
 // 
-static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
+static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id, int vr_to_check) {
+	printf("run on VR: %d\n", vr_to_check);
 
 	// 
 	// write data to all VRs on APU
@@ -101,6 +102,7 @@ static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
 	cmn_handle->cmd = GVML_WRITE;
 	cmn_handle->vr_size = VR_SIZE;
 	cmn_handle->num_vrs = NUM_VRS;
+	cmn_handle->vr_to_check = vr_to_check;
 
 	// prepare input data for APU
 	uint16_t *in = malloc(VR_SIZE * sizeof(uint16_t));
@@ -181,7 +183,7 @@ static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
 		printf("%hu ", out_read[i]);
 	} printf("\n");
 
-	printf("App Done.");
+	printf("App Done.\n");
 
 CLEAN_UP:
 	gdl_mem_free(cmn_struct_mem_hndl);
@@ -253,7 +255,9 @@ int main(int GSI_UNUSED(argc), char *argv[])
 	}
 
 	// ret = run_lab_0_cmd(valid_ctx_id);run_lab_0_cmd_copy
-	ret = run_lab_0_cmd_copy(valid_ctx_id);
+	for (int i=0; i < 14; i++) {
+		ret = run_lab_0_cmd_copy(valid_ctx_id, i);
+	}
 
 	gdl_context_free(valid_ctx_id);
 

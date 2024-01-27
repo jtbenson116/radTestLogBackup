@@ -47,19 +47,13 @@ static int gvml_write(struct common_dev_host *cmn_handle) {
 	// only use VM0 to store data
 	my_dma_l2_to_l1_32k(vm_reg);
 	// initialize X_vr, to store current vector register; validMarks... who knows
-	enum gvml_vr16 X_vr = GVML_VR16_0;
+	enum gvml_vr16 X_vr = cmn_handle->vr_to_check;
 	enum gvml_mrks_n_flgs validMarks = GVML_MRK0;
 	// only use VR_0 to write data on APU
 	gvml_load_16(X_vr, vm_reg);
 	gvml_set_m(validMarks);
 	// increment data
 	gvml_inc_u16_mrk(X_vr, X_vr, validMarks);
-
-	// gsi_info("populated GVML_VM_0 through GVML_VM_%d", num_vrs-1);
-
-	// 
-	// read from VR to host
-	// 
 	// store values from X_vr to vm_reg
 	gvml_store_16(vm_reg, X_vr);
 	// send vm_reg from l1 to l4
@@ -69,10 +63,10 @@ static int gvml_write(struct common_dev_host *cmn_handle) {
 
 static int gvml_read(struct common_dev_host *cmn_handle) {
 	gsi_info("Running read_mmb_task");
-	// gvml_init_once();
+	gvml_init_once();
 	u16 *X_l4 = gal_mem_handle_to_apu_ptr(cmn_handle->out_mem_hndl1);
 	enum gvml_vm_reg vm_reg = GVML_VM_0;
-	enum gvml_vr16 X_vr = GVML_VR16_0;
+	enum gvml_vr16 X_vr = cmn_handle->vr_to_check;
 	gvml_inc_u16(X_vr, X_vr);
 	// X_vr = cmn_handle->vr_to_check;
 	vm_reg = cmn_handle->vr_to_check;
