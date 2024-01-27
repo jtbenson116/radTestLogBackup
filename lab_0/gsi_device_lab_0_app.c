@@ -10,7 +10,7 @@
 GDL_TASK_DECLARE(gd_lab_0);
 #include "gsi_device_lab_0.h"
 
-enum { VR_SIZE = 32768 };
+enum { VR_SIZE = 32 * 1024 };
 enum { NUM_VRS = 14 };
 
 static int run_lab_0_cmd(gdl_context_handle_t ctx_id)
@@ -86,6 +86,11 @@ CLEAN_UP:
 // JB: copy function
 // 
 static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
+
+	// 
+	// write data to all VRs on APU
+	// 
+
 	// memory handles and cmd structure
 	size_t buf_size = sizeof(struct common_dev_host);
 	gdl_mem_handle_t cmn_struct_mem_hndl = gdl_mem_alloc_nonull(ctx_id, buf_size, GDL_CONST_MAPPED_POOL);
@@ -102,7 +107,11 @@ static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
 	for (size_t j = 0; j < VR_SIZE; j++) {
 		in[j] = rand() % 105;
 	}
-	printf("In data for APU task: %hu %hu %hu\n", in[0], in[1], in[2]);
+
+	printf("In data for APU task: ");
+	for (int i=0; i<10; i++) {
+		printf("%hu ", in[i]);
+	} printf("\n");
 
 	// send input data to APU
 	gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in, vr_size_in_bytes);
@@ -132,7 +141,10 @@ static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
 		gsi_error("gdl_mem_cpy_from_dev() failed: %s", gsi_status_errorstr(ret));
 		goto CLEAN_UP;
 	}
-	printf("Got data from APU task: %hu %hu %hu\n", out[0], out[1], out[2]);
+	printf("Got data from APU task: ");
+	for (int i=0; i<10; i++) {
+		printf("%hu ", out[i]);
+	} printf("\n");
 
 	// 
 	// READ data from APU
@@ -164,7 +176,10 @@ static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id) {
 		gsi_error("gdl_mem_cpy_from_dev() failed: %s", gsi_status_errorstr(ret));
 		goto CLEAN_UP;
 	}
-	printf("Got data from APU task: %hu %hu %hu\n", out_read[0], out_read[1], out_read[2]);
+	printf("Got data from APU task: ");
+	for (int i=0; i<10; i++) {
+		printf("%hu ", out_read[i]);
+	} printf("\n");
 
 	printf("App Done.");
 
