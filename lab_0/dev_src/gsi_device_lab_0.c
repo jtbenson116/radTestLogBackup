@@ -83,6 +83,10 @@ static int gvml_read(struct common_dev_host *cmn_handle) {
 
 	
 	gsi_info("Read GMVL_VM_%d to L4", vm_reg);
+	// radiation
+	// if (cmn_handle->vr_to_check==3) {
+	// 	X_l4[420]= ~X_l4[420];
+	// }
 	return 0;
 }
 

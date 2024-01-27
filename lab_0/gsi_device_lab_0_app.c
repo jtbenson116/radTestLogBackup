@@ -183,10 +183,21 @@ static int run_lab_0_cmd_copy(gdl_context_handle_t ctx_id, int vr_to_check) {
 		printf("%hu ", out_read[i]);
 	} printf("\n");
 
+	uint16_t step = 2;
+	for (int i=0; i < VR_SIZE; i++) {
+		if (in[i] + step != out_read[i]) {
+			printf("MISMATCH at %d: ", i);
+			printf("%d != %d\n", in[i]+step, out_read[i]);
+			break;
+		}
+	}
+
 	printf("App Done.\n");
 
 CLEAN_UP:
 	gdl_mem_free(cmn_struct_mem_hndl);
+	gdl_mem_free(cmn_handle->in_mem_hndl1);
+    gdl_mem_free(cmn_handle->out_mem_hndl1);
 
 	return ret;
 }
