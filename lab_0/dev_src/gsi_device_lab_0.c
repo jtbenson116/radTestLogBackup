@@ -41,7 +41,7 @@ static int gvml_write(struct common_dev_host *cmn_handle) {
 	int *gpr6 = (int *) 0xf0000230;
 	*gpr6 = 0;
 	// move data in A_l4 to l2
-	my_dma_l2_to_l4_32k(A_l4);
+	my_dma_l4_to_l2_32k(A_l4);
 	// initialialize vm_reg to 0
 	enum gvml_vm_reg vm_reg = GVML_VM_0;
 	// only use VM0 to store data
