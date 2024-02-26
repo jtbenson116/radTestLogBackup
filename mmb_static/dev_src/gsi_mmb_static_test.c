@@ -66,6 +66,7 @@ GAL_TASK_ENTRY_POINT(populate_task, in, out){
     for (vm_reg = GVML_VM_0; vm_reg <= GVML_VM_47; vm_reg++){
 	    my_dma_l2_to_l1_32k(vm_reg);
     }
+    vm_reg--;
 
     // On the device, there are 16 GVML VRs (GVML_VR16_0 through GVML_VR16_IDX), but
     // we cannot access the last one as it is reserved for system ops. Thus, we only

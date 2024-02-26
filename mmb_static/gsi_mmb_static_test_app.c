@@ -187,18 +187,12 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
     for(int i=0; i<num_vrs*VR_SIZE; i++)
 	err_mask[i] = 0;
 
-
-    
-
-    // Now we define the populate task. This task will load the random pattern into L1.
-    unsigned int populate_task = GDL_TASK(populate_task);
-    // This label is used when we reload the device with a new pattern.
  POPULATE:    
     // Store data in L4
     gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in1, vr_size_in_bytes);
     // Run the populate APU task. On the device side, this task will bring the pattern
     // up to L1 and store it into every GVML vm_reg available.
-    ret = gdl_run_task_timeout(ctx_id, populate_task,
+    ret = gdl_run_task_timeout(ctx_id, GDL_TASK(populate_task),
 			       cmn_struct_mem_hndl, GDL_MEM_HANDLE_NULL,
 			       GDL_TEMPORARY_DEFAULT_MEM_BUF,
 			       GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,
@@ -271,9 +265,7 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 	    for(vr_idx = 0; vr_idx < num_vrs; vr_idx++){
 		//printf("Checking GVML_VR_%d...\n", vr_idx);
 		cmn_handle->vr_to_check = vr_idx;
-		// Initialize and run APU read_l1_task
-		unsigned int read_mmb_task = GDL_TASK(read_mmb_task);
-		ret = gdl_run_task_timeout(ctx_id, read_mmb_task,
+		ret = gdl_run_task_timeout(ctx_id, GDL_TASK(read_mmb_task),
 					   cmn_struct_mem_hndl, GDL_MEM_HANDLE_NULL,
 					   GDL_TEMPORARY_DEFAULT_MEM_BUF,
 					   GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,
@@ -302,7 +294,7 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 		// check every element of X_l4 (out1) and A_l4(in1) to see if they still match.
 		// If they do not, raise the x_not_ok flag and increment error count.
 		for(int i=0; i < VR_SIZE; i++){
-		    if(out1[i] != in1[i]){
+		    if(out1[i]-1 != in1[i]){
 			x_not_ok = 1;
 	
 			//printf("\nError detected in VM_REG_%d, element %d", vr_idx, i);
@@ -314,8 +306,7 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 			    // This will tell us which location failed.
 			    err_mask[vr_idx*VR_SIZE+i] = 1;		    
 			}
-
-		    }		    
+		    }
 		}
 	    }// end for vm_idx->num_vrs
 	    // At this point we will have checked all vm_regs. Now we need to decide
@@ -413,7 +404,7 @@ int main(int GSI_UNUSED(argc), char *argv[]){
     // set the values of A. We could choose a static pattern or a seeded
     // pseudorandom one.
     for (size_t i = 0; i < VR_SIZE; i++) {
-	a[i] = (uint16_t)random();
+	a[i] = (uint16_t)random() % ((VR_SIZE-1) * 2); //set value limit
 	//a[i] = (uint16_t)0x5555;
     }
 

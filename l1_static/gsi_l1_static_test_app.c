@@ -198,17 +198,12 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 	err_mask[i] = 0;
 
 
-    
-
-    // Now we define the populate task. This task will load the random pattern into L1.
-    unsigned int populate_task = GDL_TASK(populate_task);
-    // This label is used when we reload the device with a new pattern.
  POPULATE:    
     // Store data in L4
     gdl_mem_cpy_to_dev(cmn_handle->in_mem_hndl1, in1, vr_size_in_bytes);
     // Run the populate APU task. On the device side, this task will bring the pattern
     // up to L1 and store it into every GVML vm_reg available.
-    ret = gdl_run_task_timeout(ctx_id, populate_task,
+    ret = gdl_run_task_timeout(ctx_id, GDL_TASK(populate_task),
 			       cmn_struct_mem_hndl, GDL_MEM_HANDLE_NULL,
 			       GDL_TEMPORARY_DEFAULT_MEM_BUF,
 			       GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,
@@ -283,9 +278,7 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 	    for(vm_idx = 0; vm_idx < num_vmrs; vm_idx++){
 		//printf("Checking GVML_VR_%d...\n", vm_idx);
 		cmn_handle->vmr_to_check = vm_idx;
-		// Initialize and run APU read_l1_task
-		unsigned int read_l1_task = GDL_TASK(read_l1_task);
-		ret = gdl_run_task_timeout(ctx_id, read_l1_task,
+		ret = gdl_run_task_timeout(ctx_id, GDL_TASK(read_l1_task),
 					   cmn_struct_mem_hndl, GDL_MEM_HANDLE_NULL,
 					   GDL_TEMPORARY_DEFAULT_MEM_BUF,
 					   GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,

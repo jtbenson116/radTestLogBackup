@@ -290,11 +290,6 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1, uint
 
 
     //printf("Initialized err count and mask.\n");
-    
-    
-    
-    // initialize GDL task
-    unsigned int add_vrs_task = GDL_TASK(add_vrs_task);
     //printf("Task created, starting loop.\n");
 
     // initialize polling structure. This will allow us to gracefully exit
@@ -380,7 +375,7 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1, uint
 	    
 
 	    // Initialize and run APU read_l1_task
-	    ret = gdl_run_task_timeout(ctx_id, add_vrs_task,
+	    ret = gdl_run_task_timeout(ctx_id, GDL_TASK(add_vrs_task),
 				       cmn_struct_mem_hndl, GDL_MEM_HANDLE_NULL,
 				       GDL_TEMPORARY_DEFAULT_MEM_BUF,
 				       GDL_TEMPORARY_DEFAULT_MEM_BUF_SIZE,
