@@ -1,0 +1,1580 @@
+diego@demo1:~/Oct31_Tests/gxld$ ./run_gxld_test.sh
+Starting GXLD test...
+Iteration 1 of 50
+Mon 13 Nov 2023 04:49:15 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850955
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 44.162
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 2 of 50
+Mon 13 Nov 2023 04:49:17 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850957
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 36.4198
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 3 of 50
+Mon 13 Nov 2023 04:49:18 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850958
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 42.3776
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 4 of 50
+Mon 13 Nov 2023 04:49:20 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850960
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 39.3811
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 5 of 50
+Mon 13 Nov 2023 04:49:21 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850961
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 42.6082
+Calculating reference ...
+Checking results for apuc 0 ...
+q = 256, e = 0: mismatch in distances: res = (idx = 2764, val = 860, is_valid = 1), ref = (idx = 2764, val = 836, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 6 of 50
+Mon 13 Nov 2023 04:49:23 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850963
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.894
+Calculating reference ...
+Checking results for apuc 0 ...
+q = 256, e = 0: mismatch in distances: res = (idx = 11640, val = 862, is_valid = 1), ref = (idx = 11640, val = 886, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 7 of 50
+Mon 13 Nov 2023 04:49:24 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850964
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 86 has more than k outputs
+Iteration 8 of 50
+Mon 13 Nov 2023 04:49:25 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850965
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 214 has more than k outputs
+Iteration 9 of 50
+Mon 13 Nov 2023 04:49:26 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850966
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 31 has more than k outputs
+Iteration 10 of 50
+Mon 13 Nov 2023 04:49:26 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850966
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 31 has more than k outputs
+Iteration 11 of 50
+Mon 13 Nov 2023 04:49:27 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850967
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 73 has more than k outputs
+Iteration 12 of 50
+Mon 13 Nov 2023 04:49:28 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850968
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 145 has more than k outputs
+Iteration 13 of 50
+Mon 13 Nov 2023 04:49:28 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850968
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 145 has more than k outputs
+Iteration 14 of 50
+Mon 13 Nov 2023 04:49:29 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850969
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 285 has more than k outputs
+Iteration 15 of 50
+Mon 13 Nov 2023 04:49:30 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850970
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 183 has more than k outputs
+Iteration 16 of 50
+Mon 13 Nov 2023 04:49:30 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850970
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 183 has more than k outputs
+Iteration 17 of 50
+Mon 13 Nov 2023 04:49:31 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850971
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 165 has more than k outputs
+Iteration 18 of 50
+Mon 13 Nov 2023 04:49:32 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850972
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 79 has more than k outputs
+Iteration 19 of 50
+Mon 13 Nov 2023 04:49:33 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850973
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 23 has more than k outputs
+Iteration 20 of 50
+Mon 13 Nov 2023 04:49:33 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850973
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 23 has more than k outputs
+Iteration 21 of 50
+Mon 13 Nov 2023 04:49:34 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850974
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 36 has more than k outputs
+Iteration 22 of 50
+Mon 13 Nov 2023 04:49:35 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850975
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 47 has more than k outputs
+Iteration 23 of 50
+Mon 13 Nov 2023 04:49:36 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850976
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 48 has more than k outputs
+Iteration 24 of 50
+Mon 13 Nov 2023 04:49:36 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850976
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 48 has more than k outputs
+Iteration 25 of 50
+Mon 13 Nov 2023 04:49:37 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850977
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 26 has more than k outputs
+Iteration 26 of 50
+Mon 13 Nov 2023 04:49:38 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850978
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 159 has more than k outputs
+Iteration 27 of 50
+Mon 13 Nov 2023 04:49:38 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850978
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 159 has more than k outputs
+Iteration 28 of 50
+Mon 13 Nov 2023 04:49:39 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850979
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 89 has more than k outputs
+Iteration 29 of 50
+Mon 13 Nov 2023 04:49:40 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850980
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 141 has more than k outputs
+Iteration 30 of 50
+Mon 13 Nov 2023 04:49:40 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850980
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 141 has more than k outputs
+Iteration 31 of 50
+Mon 13 Nov 2023 04:49:41 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850981
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 61 has more than k outputs
+Iteration 32 of 50
+Mon 13 Nov 2023 04:49:42 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850982
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 95 has more than k outputs
+Iteration 33 of 50
+Mon 13 Nov 2023 04:49:43 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850983
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 94 has more than k outputs
+Iteration 34 of 50
+Mon 13 Nov 2023 04:49:43 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850983
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 94 has more than k outputs
+Iteration 35 of 50
+Mon 13 Nov 2023 04:49:44 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850984
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 131 has more than k outputs
+Iteration 36 of 50
+Mon 13 Nov 2023 04:49:45 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850985
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 2 has more than k outputs
+Iteration 37 of 50
+Mon 13 Nov 2023 04:49:45 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850985
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 2 has more than k outputs
+Iteration 38 of 50
+Mon 13 Nov 2023 04:49:46 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850986
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 9 has more than k outputs
+Iteration 39 of 50
+Mon 13 Nov 2023 04:49:47 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850987
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 70 has more than k outputs
+Iteration 40 of 50
+Mon 13 Nov 2023 04:49:48 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850988
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 67 has more than k outputs
+Iteration 41 of 50
+Mon 13 Nov 2023 04:49:48 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850988
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 67 has more than k outputs
+Iteration 42 of 50
+Mon 13 Nov 2023 04:49:49 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850989
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 338 has more than k outputs
+Iteration 43 of 50
+Mon 13 Nov 2023 04:49:50 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850990
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 26 has more than k outputs
+Iteration 44 of 50
+Mon 13 Nov 2023 04:49:50 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850990
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 26 has more than k outputs
+Iteration 45 of 50
+Mon 13 Nov 2023 04:49:51 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850991
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 103 has more than k outputs
+Iteration 46 of 50
+Mon 13 Nov 2023 04:49:52 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850992
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 18 has more than k outputs
+Iteration 47 of 50
+Mon 13 Nov 2023 04:49:52 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850992
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 18 has more than k outputs
+Iteration 48 of 50
+Mon 13 Nov 2023 04:49:53 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850993
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 112 has more than k outputs
+Iteration 49 of 50
+Mon 13 Nov 2023 04:49:54 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850994
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 164 has more than k outputs
+Iteration 50 of 50
+Mon 13 Nov 2023 04:49:55 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1699850995
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-5e00
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  query 35 has more than k outputs
+GSI Leda-G SSH
+Starting................
+Version: 100.12.0.1.1000.25
+Not Connected
+> init ok
+slot0 {'Apuc_Mask': '0xf', 'Dev_Name': 'dev-5e00', 'FW Status': 'background', 'File_Name': '/dev/apu/mngt/m00', 'Log_State': 'Card Not Responsive', 'Mac': '22:01', 'Mem_Size': '15027142656', 'Version': '120.12.300.3'}
+{'Apuc_Mask': '0xf', 'Dev_Name': 'dev-5e00', 'FW Status': 'background', 'File_Name': '/dev/apu/mngt/m00', 'Log_State': 'Card Not Responsive', 'Mac': '22:01', 'Mem_Size': '15027142656', 'Version': '120.12.300.3'}
+Connected
+flf
+quit
+Test complete.
+diego@demo1:~/Oct31_Tests/gxld$ dev_diagnostic
+GSI-LOG: ####################
+GSI-LOG: #contex number = 0 #
+GSI-LOG: #core number = 0   #
+GSI-LOG: ####################
+
+rsp16 test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+rsp16 with wa test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+rsp256 test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+rsp256 with wa test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+rsp2k test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+rsp2k with wa test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+rl 2k test:
+	section #	| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+			| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000| 0000|
+
+sb 2k test:
+	sb #/section #	|  0    |  1    |  2    |  3    |  4    |  5    |  6    |  7    |  8    |  9    |  10   |  11   |  12   |  13   |  14   |  15   |
+		0	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		1	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		2	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		3	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		4	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		5	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		6	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		7	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		8	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		9	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		10	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		11	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		12	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		13	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		14	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		15	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		16	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		17	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		18	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		19	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		20	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		21	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		22	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+		23	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000	| 0000  |
+
+
+gl test:
+		|  GL  |
+		| 8800 |
+
+ggl test:
+		|GGL 0|GGL 1|GGL 2|GGL 3|
+		| 0800| 8000| 0000| 0000|
+
+l3 test
+		L3 TEST - OK
+l4 test
+		L4 TEST - OK
+dma l4 l2 direct test
+	APC A:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+			
+	APC B:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+			
+dma l4 l2 indirect test
+	APC A:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+			
+	APC B:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+			
+dma l4 l2 mmb direct test
+	APC A:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+			
+	APC B:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |x |x |x |x |x |x |x |x |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |x |x |x |x |x |x |x |x |
+			
+dma l4 l2 mmb indirect test
+	APC A:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+			
+	APC B:
+	column group #	|0 |1 |2 |3 |4 |5 |6 |7 |8 |9 |10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|
+			|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |x |x |x |x |x |x |x |x |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |x |x |x |x |x |x |x |x |
+			
+
+TEST END
+
+
+
+Test Result FAIL
+

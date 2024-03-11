@@ -1,0 +1,615 @@
+diego@demo1:~/Oct31_Tests/l1_dynamic$ ./build/debug/gsi_l1_dynamic_test 10000
+Running on card number 0
+
+Listening for input, type 'q' to exit, 's' to stop:
+Cumulative error count: 0
+Reading from L1 on APU, iteration 1
+Cumulative error count: 0
+Reading from L1 on APU, iteration 2
+Cumulative error count: 0
+Reading from L1 on APU, iteration 3
+Cumulative error count: 0
+Reading from L1 on APU, iteration 4
+Cumulative error count: 0
+Reading from L1 on APU, iteration 5
+Cumulative error count: 0
+Reading from L1 on APU, iteration 6
+Cumulative error count: 0
+Reading from L1 on APU, iteration 7
+Cumulative error count: 0
+Reading from L1 on APU, iteration 8
+Cumulative error count: 0
+Reading from L1 on APU, iteration 9
+Cumulative error count: 0
+Reading from L1 on APU, iteration 10
+Cumulative error count: 0
+Reading from L1 on APU, iteration 11
+Cumulative error count: 0
+Reading from L1 on APU, iteration 12
+Cumulative error count: 58
+Reading from L1 on APU, iteration 13
+Cumulative error count: 118
+Reading from L1 on APU, iteration 14
+Cumulative error count: 197
+Reading from L1 on APU, iteration 15
+Cumulative error count: 274
+Reading from L1 on APU, iteration 16
+Cumulative error count: 340
+Reading from L1 on APU, iteration 17
+Cumulative error count: 414
+Reading from L1 on APU, iteration 18
+Cumulative error count: 504
+Reading from L1 on APU, iteration 19
+Cumulative error count: 583
+Reading from L1 on APU, iteration 20
+Cumulative error count: 654
+Reading from L1 on APU, iteration 21
+Cumulative error count: 721
+Reading from L1 on APU, iteration 22
+Cumulative error count: 805
+Reading from L1 on APU, iteration 23
+Cumulative error count: 882
+Reading from L1 on APU, iteration 24
+Cumulative error count: 942
+Reading from L1 on APU, iteration 25
+Cumulative error count: 1035
+Reading from L1 on APU, iteration 26
+Cumulative error count: 1092
+Reading from L1 on APU, iteration 27
+Cumulative error count: 1165
+Reading from L1 on APU, iteration 28
+Cumulative error count: 1220
+Reading from L1 on APU, iteration 29
+Cumulative error count: 1261
+Reading from L1 on APU, iteration 30
+Cumulative error count: 1352
+Reading from L1 on APU, iteration 31
+Cumulative error count: 1413
+Reading from L1 on APU, iteration 32
+Cumulative error count: 1478
+Reading from L1 on APU, iteration 33
+Cumulative error count: 1553
+Reading from L1 on APU, iteration 34
+Cumulative error count: 1642
+Reading from L1 on APU, iteration 35
+Cumulative error count: 1724
+Reading from L1 on APU, iteration 36
+Cumulative error count: 1805
+Reading from L1 on APU, iteration 37
+Cumulative error count: 1866
+Reading from L1 on APU, iteration 38
+Cumulative error count: 1917
+Reading from L1 on APU, iteration 39
+Cumulative error count: 2001
+Reading from L1 on APU, iteration 40
+Cumulative error count: 2060
+Reading from L1 on APU, iteration 41
+Cumulative error count: 2126
+Reading from L1 on APU, iteration 42
+Cumulative error count: 2194
+Reading from L1 on APU, iteration 43
+Cumulative error count: 2263
+Reading from L1 on APU, iteration 44
+Cumulative error count: 2356
+Reading from L1 on APU, iteration 45
+Cumulative error count: 2415
+Reading from L1 on APU, iteration 46
+Cumulative error count: 2485
+Reading from L1 on APU, iteration 47
+Cumulative error count: 2528
+Reading from L1 on APU, iteration 48
+Cumulative error count: 2601
+Reading from L1 on APU, iteration 49
+Cumulative error count: 2663
+Reading from L1 on APU, iteration 50
+Cumulative error count: 2741
+Reading from L1 on APU, iteration 51
+Cumulative error count: 2797
+Reading from L1 on APU, iteration 52
+Cumulative error count: 2856
+Reading from L1 on APU, iteration 53
+Cumulative error count: 2914
+Reading from L1 on APU, iteration 54
+Cumulative error count: 2983
+Reading from L1 on APU, iteration 55
+Cumulative error count: 3052
+Reading from L1 on APU, iteration 56
+Cumulative error count: 3130
+Reading from L1 on APU, iteration 57
+Cumulative error count: 3187
+Reading from L1 on APU, iteration 58
+Cumulative error count: 3239
+Reading from L1 on APU, iteration 59
+Cumulative error count: 3334
+Reading from L1 on APU, iteration 60
+Cumulative error count: 3410
+Reading from L1 on APU, iteration 61
+Cumulative error count: 3477
+Reading from L1 on APU, iteration 62
+Cumulative error count: 3560
+Reading from L1 on APU, iteration 63
+Cumulative error count: 3633
+Reading from L1 on APU, iteration 64
+Cumulative error count: 3703
+Reading from L1 on APU, iteration 65
+Cumulative error count: 3775
+Reading from L1 on APU, iteration 66
+Cumulative error count: 3847
+Reading from L1 on APU, iteration 67
+Cumulative error count: 3955
+Reading from L1 on APU, iteration 68
+Cumulative error count: 4037
+Reading from L1 on APU, iteration 69
+Cumulative error count: 4119
+Reading from L1 on APU, iteration 70
+Cumulative error count: 4194
+Reading from L1 on APU, iteration 71
+Cumulative error count: 4244
+Reading from L1 on APU, iteration 72
+Cumulative error count: 4333
+Reading from L1 on APU, iteration 73
+Cumulative error count: 4408
+Reading from L1 on APU, iteration 74
+Cumulative error count: 4485
+Reading from L1 on APU, iteration 75
+Cumulative error count: 4516
+Reading from L1 on APU, iteration 76
+Cumulative error count: 4565
+Reading from L1 on APU, iteration 77
+Cumulative error count: 4618
+Reading from L1 on APU, iteration 78
+Cumulative error count: 4688
+Reading from L1 on APU, iteration 79
+Cumulative error count: 4753
+Reading from L1 on APU, iteration 80
+Cumulative error count: 4832
+Reading from L1 on APU, iteration 81
+Cumulative error count: 4882
+Reading from L1 on APU, iteration 82
+Cumulative error count: 4935
+Reading from L1 on APU, iteration 83
+Cumulative error count: 5022
+Reading from L1 on APU, iteration 84
+Cumulative error count: 5094
+Reading from L1 on APU, iteration 85
+Cumulative error count: 5162
+Reading from L1 on APU, iteration 86
+Cumulative error count: 5223
+Reading from L1 on APU, iteration 87
+Cumulative error count: 5272
+Reading from L1 on APU, iteration 88
+Cumulative error count: 5325
+Reading from L1 on APU, iteration 89
+Cumulative error count: 5383
+Reading from L1 on APU, iteration 90
+Cumulative error count: 5456
+Reading from L1 on APU, iteration 91
+Cumulative error count: 5535
+Reading from L1 on APU, iteration 92
+Cumulative error count: 5617
+Reading from L1 on APU, iteration 93
+Cumulative error count: 5666
+Reading from L1 on APU, iteration 94
+Cumulative error count: 5748
+Reading from L1 on APU, iteration 95
+Cumulative error count: 5798
+Reading from L1 on APU, iteration 96
+Cumulative error count: 5870
+Reading from L1 on APU, iteration 97
+Cumulative error count: 5945
+Reading from L1 on APU, iteration 98
+Cumulative error count: 5982
+Reading from L1 on APU, iteration 99
+Cumulative error count: 6067
+Reading from L1 on APU, iteration 100
+Cumulative error count: 6131
+Reading from L1 on APU, iteration 101
+Cumulative error count: 6199
+Reading from L1 on APU, iteration 102
+Cumulative error count: 6279
+Reading from L1 on APU, iteration 103
+Cumulative error count: 6331
+Reading from L1 on APU, iteration 104
+Cumulative error count: 6376
+Reading from L1 on APU, iteration 105
+Cumulative error count: 6440
+Reading from L1 on APU, iteration 106
+Cumulative error count: 6531
+Reading from L1 on APU, iteration 107
+Cumulative error count: 6577
+Reading from L1 on APU, iteration 108
+Cumulative error count: 6644
+Reading from L1 on APU, iteration 109
+Cumulative error count: 6705
+Reading from L1 on APU, iteration 110
+Cumulative error count: 6754
+Reading from L1 on APU, iteration 111
+Cumulative error count: 6818
+Reading from L1 on APU, iteration 112
+Cumulative error count: 6873
+Reading from L1 on APU, iteration 113
+Cumulative error count: 6938
+Reading from L1 on APU, iteration 114
+Cumulative error count: 7009
+Reading from L1 on APU, iteration 115
+Cumulative error count: 7088
+Reading from L1 on APU, iteration 116
+Cumulative error count: 7156
+Reading from L1 on APU, iteration 117
+Cumulative error count: 7210
+Reading from L1 on APU, iteration 118
+Cumulative error count: 7278
+Reading from L1 on APU, iteration 119
+Cumulative error count: 7343
+Reading from L1 on APU, iteration 120
+Cumulative error count: 7397
+Reading from L1 on APU, iteration 121
+Cumulative error count: 7444
+Reading from L1 on APU, iteration 122
+Cumulative error count: 7495
+Reading from L1 on APU, iteration 123
+Cumulative error count: 7564
+Reading from L1 on APU, iteration 124
+Cumulative error count: 7615
+Reading from L1 on APU, iteration 125
+Cumulative error count: 7710
+Reading from L1 on APU, iteration 126
+Cumulative error count: 7764
+Reading from L1 on APU, iteration 127
+Cumulative error count: 7840
+Reading from L1 on APU, iteration 128
+Cumulative error count: 7916
+Reading from L1 on APU, iteration 129
+Cumulative error count: 7999
+Reading from L1 on APU, iteration 130
+Cumulative error count: 8056
+Reading from L1 on APU, iteration 131
+Cumulative error count: 8096
+Reading from L1 on APU, iteration 132
+Cumulative error count: 8143
+Reading from L1 on APU, iteration 133
+Cumulative error count: 8207
+Reading from L1 on APU, iteration 134
+Cumulative error count: 8282
+Reading from L1 on APU, iteration 135
+Cumulative error count: 8376
+Reading from L1 on APU, iteration 136
+Cumulative error count: 8444
+Reading from L1 on APU, iteration 137
+Cumulative error count: 8514
+Reading from L1 on APU, iteration 138
+Cumulative error count: 8607
+Reading from L1 on APU, iteration 139
+Cumulative error count: 8684
+Reading from L1 on APU, iteration 140
+Cumulative error count: 8757
+Reading from L1 on APU, iteration 141
+Cumulative error count: 8804
+Reading from L1 on APU, iteration 142
+Cumulative error count: 8859
+Reading from L1 on APU, iteration 143
+Cumulative error count: 8920
+Reading from L1 on APU, iteration 144
+Cumulative error count: 8998
+Reading from L1 on APU, iteration 145
+Cumulative error count: 9059
+Reading from L1 on APU, iteration 146
+Cumulative error count: 9129
+Reading from L1 on APU, iteration 147
+Cumulative error count: 9198
+Reading from L1 on APU, iteration 148
+Cumulative error count: 9262
+Reading from L1 on APU, iteration 149
+Cumulative error count: 9333
+Reading from L1 on APU, iteration 150
+Cumulative error count: 9425
+Reading from L1 on APU, iteration 151
+Cumulative error count: 9511
+Reading from L1 on APU, iteration 152
+Cumulative error count: 9570
+Reading from L1 on APU, iteration 153
+Cumulative error count: 9636
+Reading from L1 on APU, iteration 154
+Cumulative error count: 9677
+Reading from L1 on APU, iteration 155
+Cumulative error count: 9740
+Reading from L1 on APU, iteration 156
+Cumulative error count: 9781
+Reading from L1 on APU, iteration 157
+Cumulative error count: 9837
+Reading from L1 on APU, iteration 158
+Cumulative error count: 9911
+Reading from L1 on APU, iteration 159
+Cumulative error count: 9988
+Reading from L1 on APU, iteration 160
+Cumulative error count: 10046
+Reading from L1 on APU, iteration 161
+Cumulative error count: 10115
+Reading from L1 on APU, iteration 162
+Cumulative error count: 10170
+Reading from L1 on APU, iteration 163
+Cumulative error count: 10243
+Reading from L1 on APU, iteration 164
+Cumulative error count: 10309
+Reading from L1 on APU, iteration 165
+Cumulative error count: 10409
+Reading from L1 on APU, iteration 166
+Cumulative error count: 10460
+Reading from L1 on APU, iteration 167
+Cumulative error count: 10520
+Reading from L1 on APU, iteration 168
+Cumulative error count: 10590
+Reading from L1 on APU, iteration 169
+Cumulative error count: 10666
+Reading from L1 on APU, iteration 170
+Cumulative error count: 10728
+Reading from L1 on APU, iteration 171
+Cumulative error count: 10778
+Reading from L1 on APU, iteration 172
+Cumulative error count: 10827
+Reading from L1 on APU, iteration 173
+Cumulative error count: 10900
+Reading from L1 on APU, iteration 174
+Cumulative error count: 11006
+Reading from L1 on APU, iteration 175
+Cumulative error count: 11047
+Reading from L1 on APU, iteration 176
+Cumulative error count: 11124
+Reading from L1 on APU, iteration 177
+Cumulative error count: 11208
+Reading from L1 on APU, iteration 178
+Cumulative error count: 11261
+Reading from L1 on APU, iteration 179
+Cumulative error count: 11312
+Reading from L1 on APU, iteration 180
+Cumulative error count: 11410
+Reading from L1 on APU, iteration 181
+Cumulative error count: 11463
+Reading from L1 on APU, iteration 182
+Cumulative error count: 11533
+Reading from L1 on APU, iteration 183
+Cumulative error count: 11584
+Reading from L1 on APU, iteration 184
+Cumulative error count: 11644
+Reading from L1 on APU, iteration 185
+Cumulative error count: 11730
+Reading from L1 on APU, iteration 186
+Cumulative error count: 11826
+Reading from L1 on APU, iteration 187
+Cumulative error count: 11906
+Reading from L1 on APU, iteration 188
+Cumulative error count: 11989
+Reading from L1 on APU, iteration 189
+Cumulative error count: 12042
+Reading from L1 on APU, iteration 190
+Cumulative error count: 12111
+Reading from L1 on APU, iteration 191
+Cumulative error count: 12197
+Reading from L1 on APU, iteration 192
+Cumulative error count: 12262
+Reading from L1 on APU, iteration 193
+Cumulative error count: 12340
+Reading from L1 on APU, iteration 194
+Cumulative error count: 12401
+Reading from L1 on APU, iteration 195
+Cumulative error count: 12504
+Reading from L1 on APU, iteration 196
+Cumulative error count: 12558
+Reading from L1 on APU, iteration 197
+Cumulative error count: 12627
+Reading from L1 on APU, iteration 198
+Cumulative error count: 12689
+Reading from L1 on APU, iteration 199
+Cumulative error count: 12746
+Reading from L1 on APU, iteration 200
+Cumulative error count: 12816
+Reading from L1 on APU, iteration 201
+Cumulative error count: 12882
+Reading from L1 on APU, iteration 202
+Cumulative error count: 12940
+Reading from L1 on APU, iteration 203
+Cumulative error count: 13003
+Reading from L1 on APU, iteration 204
+Cumulative error count: 13080
+Reading from L1 on APU, iteration 205
+Cumulative error count: 13139
+Reading from L1 on APU, iteration 206
+Cumulative error count: 13205
+Reading from L1 on APU, iteration 207
+Cumulative error count: 13286
+Reading from L1 on APU, iteration 208
+Cumulative error count: 13384
+Reading from L1 on APU, iteration 209
+Cumulative error count: 13458
+Reading from L1 on APU, iteration 210
+Cumulative error count: 13520
+Reading from L1 on APU, iteration 211
+Cumulative error count: 13599
+Reading from L1 on APU, iteration 212
+Cumulative error count: 13671
+Reading from L1 on APU, iteration 213
+Cumulative error count: 13741
+Reading from L1 on APU, iteration 214
+Cumulative error count: 208685
+Reading from L1 on APU, iteration 215
+Cumulative error count: 208754
+Reading from L1 on APU, iteration 216
+Cumulative error count: 208817
+Reading from L1 on APU, iteration 217
+Cumulative error count: 208858
+Reading from L1 on APU, iteration 218
+Cumulative error count: 208894
+Reading from L1 on APU, iteration 219
+Cumulative error count: 208954
+Reading from L1 on APU, iteration 220
+Cumulative error count: 209007
+Reading from L1 on APU, iteration 221
+Cumulative error count: 209074
+Reading from L1 on APU, iteration 222
+Cumulative error count: 209163
+Reading from L1 on APU, iteration 223
+Cumulative error count: 209192
+Reading from L1 on APU, iteration 224
+Cumulative error count: 209272
+Reading from L1 on APU, iteration 225
+Cumulative error count: 209325
+Reading from L1 on APU, iteration 226
+Cumulative error count: 209385
+Reading from L1 on APU, iteration 227
+Cumulative error count: 209462
+Reading from L1 on APU, iteration 228
+Cumulative error count: 209537
+Reading from L1 on APU, iteration 229
+Cumulative error count: 209605
+Reading from L1 on APU, iteration 230
+Cumulative error count: 209654
+Reading from L1 on APU, iteration 231
+Cumulative error count: 209732
+Reading from L1 on APU, iteration 232
+Cumulative error count: 209801
+Reading from L1 on APU, iteration 233
+Cumulative error count: 209855
+Reading from L1 on APU, iteration 234
+Cumulative error count: 209921
+Reading from L1 on APU, iteration 235
+Cumulative error count: 210006
+Reading from L1 on APU, iteration 236
+Cumulative error count: 210046
+Reading from L1 on APU, iteration 237
+Cumulative error count: 210111
+Reading from L1 on APU, iteration 238
+Cumulative error count: 210157
+Reading from L1 on APU, iteration 239
+Cumulative error count: 210228
+Reading from L1 on APU, iteration 240
+Cumulative error count: 210282
+Reading from L1 on APU, iteration 241
+Cumulative error count: 210338
+Reading from L1 on APU, iteration 242
+Cumulative error count: 210377
+Reading from L1 on APU, iteration 243
+Cumulative error count: 210426
+Reading from L1 on APU, iteration 244
+Cumulative error count: 210490
+Reading from L1 on APU, iteration 245
+Cumulative error count: 210525
+Reading from L1 on APU, iteration 246
+Cumulative error count: 210608
+Reading from L1 on APU, iteration 247
+Cumulative error count: 210679
+Reading from L1 on APU, iteration 248
+Cumulative error count: 210756
+Reading from L1 on APU, iteration 249
+Cumulative error count: 210794
+Reading from L1 on APU, iteration 250
+Cumulative error count: 210888
+Reading from L1 on APU, iteration 251
+Cumulative error count: 210960
+Reading from L1 on APU, iteration 252
+Cumulative error count: 211027
+Reading from L1 on APU, iteration 253
+Cumulative error count: 211080
+Reading from L1 on APU, iteration 254
+Cumulative error count: 211120
+Reading from L1 on APU, iteration 255
+Cumulative error count: 211174
+Reading from L1 on APU, iteration 256
+Cumulative error count: 211233
+Reading from L1 on APU, iteration 257
+Cumulative error count: 211296
+Reading from L1 on APU, iteration 258
+Cumulative error count: 211332
+Reading from L1 on APU, iteration 259
+Cumulative error count: 211396
+Reading from L1 on APU, iteration 260
+Cumulative error count: 211446
+Reading from L1 on APU, iteration 261
+Cumulative error count: 211499
+Reading from L1 on APU, iteration 262
+Cumulative error count: 211546
+Reading from L1 on APU, iteration 263
+Cumulative error count: 211613
+Reading from L1 on APU, iteration 264
+Cumulative error count: 211682
+Reading from L1 on APU, iteration 265
+Cumulative error count: 211712
+Reading from L1 on APU, iteration 266
+Cumulative error count: 211774
+Reading from L1 on APU, iteration 267
+Cumulative error count: 211833
+Reading from L1 on APU, iteration 268
+Cumulative error count: 211883
+Reading from L1 on APU, iteration 269
+Cumulative error count: 211957
+Reading from L1 on APU, iteration 270
+Cumulative error count: 212028
+Reading from L1 on APU, iteration 271
+Cumulative error count: 212093
+Reading from L1 on APU, iteration 272
+Cumulative error count: 212141
+Reading from L1 on APU, iteration 273
+Cumulative error count: 212171
+Reading from L1 on APU, iteration 274
+Cumulative error count: 212233
+Reading from L1 on APU, iteration 275
+Cumulative error count: 212302
+Reading from L1 on APU, iteration 276
+Cumulative error count: 212369
+Reading from L1 on APU, iteration 277
+Cumulative error count: 212440
+Reading from L1 on APU, iteration 278
+Error encountered in read_l1_task. Code -110 (timed out)
+
+Read failed at APU task level. Exiting...
+Cumulative error count: 212440
+Reading from L1 on APU, iteration 279
+Error encountered in read_l1_task. Code -110 (timed out)
+
+Read failed at APU task level. Exiting...
+Cumulative error count: 212440
+Reading from L1 on APU, iteration 280
+sError encountered in read_l1_task. Code -110 (timed out)
+
+Read failed at APU task level. Exiting...
+
+Writing log file...
+Log written.
+Test paused, press 'q' to quit, 'd' to reload, or 'k' to continue...
+q
+Exit
+diego@demo1:~/Oct31_Tests/l1_dynamic$ 
+
+
+
+
+
+
+
+
+
+
+
+diego@demo1:~/Oct31_Tests/l1_dynamic$ dev_diagnostic
+GSI-LOG: run_init_task() - ret = ETIMEDOUT. gdl_schedule_batch() timeout, reset APU
+GSI-LOG: gdl_context_free_and_reset(): ret value of ioctl() - 0
+GSI-LOG: gdl_context_free_and_reset(): ret value of gdl_context_free() - 0
+GSI-LOG: run_init_task() - ret = EAGAIN. gdl_context_free_and_reset()
+GSI-LOG:   FATAL: dev-diagnostic.c:584:                        main: gdl_context_alloc(contexts_desc[0].ctx_id)  ,ret = -11
+diego@demo1:~/Oct31_Tests/l1_dynamic$ ledag-ssh
+GSI Leda-G SSH
+Starting................
+Version: 100.12.0.1.1000.25
+Not Connected
+> connect 0
+init ok
+slot0 {'Apuc_Mask': 'Card Not Responsive', 'Dev_Name': 'dev-5e00', 'FW Status': 'Card Not Responsive', 'File_Name': '/dev/apu/mngt/m00', 'Log_State': 'Card Not Responsive', 'Mac': 'Card Not Responsive', 'Mem_Size': 'Card Not Responsive', 'Version': 'Card Not Responsive'}
+
+
+
+
+
+
+
+
+
+
