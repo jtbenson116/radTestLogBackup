@@ -1,0 +1,222 @@
+----------- DIEGO'S LANSCE 2024 EXPERIMENT ---------------
+Some general notes:
+The local timezone for Los Alamos, NM is Mountain Standard (MST, GMT-7).
+The timezome reported by the server rack is in UTC. This means that
+to covert the timestamps of the logs to local time, we must subtract 7
+hours. UTC IS 7 HOURS AHEAD OF MOUNTAIN.
+
+For this experiment, we are using the neutron beam housed at the ICE-1
+facility at Los Alamos Neutron Science Center (LANSCE), part of Los
+Alamos National Laboratory (LANL).
+
+Due to the nature of the neutron test, as well as to not
+interfere with my coworkers experiments from SHREC, I am running primarily
+the dynamic L1 and dynamic MMB tests. These tests dont require the
+beam to be turned on and off frequently, and can run for long periods of
+time.
+
+These tests were performed with some assistance of the SHREC 2024 LANSCE
+experiment crew: Diego Wildenstein, Tyler Garrett, Josh Poravanthattil,
+and Thomas Plunkett.
+
+--- Wednesday (2-21-2024)
+I set up a Leda-G APU in the demo1 server rack. The Leda-G was placed
+directly in the beam path while the server was positioned outside,
+with shielding around it to protect it from any stray daughter particles
+from the beam or the other experiments. I initially connected my host
+desktop machine (GSI FA 170000000369) to the demo1 server rack with a
+direct ethernet cable. However, I was not able to ssh between the two
+machines. After some trial and error, I was able to connect the demo1
+server rack in the beam room by connecting the server to an ethernet
+switch outside of the beam room, then also connecting that switch to my
+host machine. The server rack has a static IP address of 192.168.99.50,
+so in order to ping the server I also had to create a new connection on
+my machine, with IP address 192.168.99.1 and gateway 255.255.255.0.
+Using the router can actually be somewhat spotty if the antennae aren't
+adjusted. For recompiling the tests, I was not able to bring up the
+license server on the demo1 rack. After an hour or so of fighting with
+lmgrd and snpslmd, I decided to fall back on an easier solution of
+using a VPN to access the license server at 27020@192.168.99.8, similarly
+to how I normally compile programs at the SHREC lab. However, the LANL
+network does not permit VPNs, so I ended up doing a phone tether connection
+with my cell phone to access the VPN, which then let me acccess the
+compiler license to build and make changes to the testing codes as needed.
+
+Once I got the server setup running, I did few quick l1 static and dynamic
+tests in the beam to find out how the the device would react. These initial
+tests were not saved or recorded. From these tests, it seemed as though the
+upset rate of the APU device was much lower than it was during the heavy
+ion testing at the TAMU Cyclotron facility. There are some really interesting
+differences in the physics and device interactions of these two beams,
+but I may end up saving that for later on. For the purposes of this
+experiment, we should know that the upset rate in the LANSCE neutron beam
+is much smaller, and SEFIs occur much less frequently. This means that our
+tests can be run over much longer periods of time to collect data on SEUs.
+In addition, the beam at LANSCE is less precise at delivering a specified
+amount of fluence; to get the effective fluence, we have to multiply the
+number of neutron pulses (ticks) by a conversion factor that is determined
+by the energy of the particle impact on the target. Practically speaking,
+LANSCE gives us the number of neutron pulses, and a conversion factor based
+on what time each test was running, and we multiply these to determine
+fluence on the device. 
+
+
+
+I modified the MMB dynamic tests slightly due to some comments from
+Jacob Benson at GSI. The modification involves shuffling which VRs on the
+device are used to do the addition calculation, so now we are constantly
+changing which VRs and which areas of the device we are testing.
+All of the radiation tests were also modified to give the epoch time
+(UNIX style datestamp) at the time the log was generated as well as the
+datestamp when the executable is called. Since neutron tests are much
+longer, I thought that this would help to correlate them with the data we
+get from the beam. 
+
+I created a script called runAllTests.sh, which runs the l1_dynamic test
+and the mmb_dynamic test for a specified number of iterations.
+
+--- Thursday (2-22-2024)
+For the first experiment on wednesday, I configured the runAllTests.sh to
+do 3 runs of the l1_dynamic test, with 7200 iterations each. After each run
+of the l1_dynamic test, the leda device is rebooted. After this, I also
+do the same with the mmb_dynamic test, so 3 runs with 7200 iterations each.
+since each iteration takes about a second, I estimated that this automated
+test would take about 10-12 hours, so we turned the beam on with a plan to
+let the beam test run overnight. The beam was turned off for a few minutes
+after the start of the test due to some issues with another experiment.
+When I came back the next day, I checked the log files, which should be in
+RAT_test_2-21-24. From these logs, it looks like there were some problems
+with the test. The first L1 dynamic test looks like it exited after only 2
+iterations, which is strange since it should run for 7200 iterations.
+According to the log, it completed successfully after reaching the max
+iterations, which it lists as 2. This is incorrect, so it may be an issue
+with the script I made, or it could be a chance encounter with the beam that
+changed the max iters to 2. I'll have to look more into this later. For the
+second run of the l1 dynamic test, the test looks like it completed fine
+and ran through the whole 7200 iterations. This one worked like a charm, and
+we got some pretty good SEEs and upset data from it. For the third of the
+l1 dynamic test, it looks like the program failed to allocate the APU context,
+and the test was never properly started. This couldve been due to the card
+not being fully reset after the previous reboot or maybe some kind of
+radiation event. Unfortunately this means that I got no data from this run.
+
+For the MMB runs, the first one was similar to the first l1 dynamic where it
+exited without issues after iteration 2. Since its supposed to go to 7200, and
+it happened with the first test of both the l1 and MMB tests, I think this is
+most likely an issue with my test script. For the second run, I got the message
+that 'all cards are in use' signifying that the APU board is locked up,
+which usually requires a card reboot to fix. I got little data from the MMB
+tests I ran overnight. to check the status of the board, I also ran the
+dev_diagnostic command after I got back in the morning, and saved the output
+to the results folder. 
+
+
+For the next experiment today, I am going to do a few manual runs of the
+l1_dynamic and mmb_dynamic tests. I want to make sure that we have some
+interesting data from each test in case the fully automated script doesn't
+work for future tests.
+First, I ran the l1_dynamic test for 1000 iterations. I did three runs of
+this test in the morning, without rebooting the card in between. the data
+for these tests has been captured in l1_dynamic/_logs/, sorted by test number
+and date stamp. I noticed at this point that the server captures logs in UTC,
+not local time (MST). Considering that I have already run a few tests, I
+I think its best not to	update the servpacket_write_wait: Connection to 192.168.99.50 port 22: Broken pipe
+UPDATE: While running test #3 and writing this journal, I encountered a
+SEFI-like event that crashed the demo1 server rack. I was able to recover
+the server by pausing the beam and manually power cycling the server. I
+also verified that the APU is functioning after the reboot. I am going to
+put whatever data I can recover from the previous test in the folder
+called _logs/l1d_test3-2-22-2024-19-27-57. 
+To finish the previous thought, I am not going to update the server time
+as I think it will cause more confusion, so remember to convert the server
+datestamps from UTC to Los Alamos time to synchronize with the beam data
+we get from them. To make up for this crash, I reran the test again to
+get additional upset data, which has been logged as l1d_test4.
+
+
+After the crash earlier, I ran the runMMBtests.sh script, which is just
+my earlier runAllTests.sh script but with the l1 dynamic test removed.
+I cut this one down to 1000 iterations, which should give us a good amount
+of data and help make up for the data we missed earlier. This test appears
+to have completed without any issues, and has been saved as
+RAT_MMB_test_2-22-24. For this test, the card is rebooted after every run.
+After the test completed, running the dev_diagnostic tool, returned test
+result FAIL, with a good number of failures in the RSP sections. The output
+of the dev_diagnostic has also been included in the same folder. 
+
+
+I ran the GXLD tests in the afternoon. For the first test, the beam went down
+shortly after the gxld test was started, and the device experienced no upsets.
+Because of this, I do not know if any valueable information was captured in
+gxld_test1, but it is included anyways just in case. After the beam was
+back online, I ran another gxld test without rebooting the card. Since the beam
+was already active when starting gxld_test2, the board experienced failures
+right away. This may have been due to faults already present in the device.
+During this test, the device was left hanging on iteration 19 of 30, after
+the step labeled "performing searches...". Without turning off the beam
+(it would disturb the other experiments) I used Ctrl-C to exit the test and
+rebooted the card with the ledag-ssh tool. Immediately after the card rebooted,
+I ran dev_diagnostic, which reported test result PASS, and did not show any
+errors. I then ran the gxld test, which did report some errors. This test is
+saved as gxld_test4. After logging this test, I rebooted the card to perform
+gxld_test5. This test ran without any errors, however I noted partway through
+that the beam was offline again, so I'm not sure how valid this test is. 
+
+Once the beam was back up, I ran the MMB dynamic tests. These were arranged in
+the same way as the l1_dynamic tests earlier, so I navigated to the mmb_dynamic
+directory and ran the following:
+./build/debug/gsi_mmb_dynamic_test 1000 | tee -a mmb_dynamic_test1.txt
+Using tee -a allowed me to see the output of the test while also recording it
+to a text file. This works decently well, however the output is kinda laggy.
+Just to make sure, I also recorded the terminal session using 'screen'. To make
+sure each of my tests were clean, I also rebooted the card before each test.
+With 1000 iterations, each test took about 25 minutes or so. I repeated this
+process 5 times to try and collect enough SEU data, so about 2.5 hours total.
+
+To make the best use of the beam time, I reconfigured the RAT to run 1000
+iterations of both dynamic tests, with 5 iterations each. For each of these
+tests, I reconfigured the logging to sort the individual tests better. The
+RAT also reboots the card after every run to ensure fairness between the
+tests. By my estimation, this RAT should take around 10 hours if everything
+functions as expected. I then set the script to run overnight (I actually
+ended up staying for the whole thing).
+
+At 11:42 PM the previous RAT test was completed, and seemed to function without
+any major errors or SEFI type events. This collection should give us some solid
+SEU data for the part. I should note that during this collection run, the beam
+was paused for a few minutes during two points so that adjustments could be
+made to the other experiments. After the test, I ran another dev_diagnostic,
+which reported failed and showed several failed locations. However, as with the
+other tests, the APU was always recoverable by simply rebooting the card. Since
+that test collected lots of data without any issues, I will set another one to run
+until the morning. As for the timing, I miscalculated my initial estimate, and the
+test only took a little over four hours. For the next morning run, I am going to
+add in a periodic datestamp to the capture log. I will also double the number of
+times each test is ran so that the new test runs until about 8 AM, giving me
+enough time to actually sleep this time.
+
+ ---- Friday (2/23/24)
+After returning in the morning around 9AM on Friday, I discovered that the
+previous test had gone all the way to the seventh mmb dynamic test before
+hanging indefinitely. It looked like the code was giving a timeout error on all
+APU tasks, which probably means that the server rack was no longer able to
+communicate with it. In addition, dev_diagnostic was not able to access the APU
+card either. However, I was still able to use the ledag-ssh tool to reboot the
+card, which fixed all errors. After resetting, the card operated as normal. The
+results of this test are saved in RAT_test_fridayMorning-2-23-24.
+
+During this morning I also ran the mmb_dynamic tests 4 and 5, since I did not
+have the time to complete them yesterday. These test results are in the
+mmb_dynamic/_logs/mmb_dynamic_test4 and mmb_dynamic/_logs/mmb_dynamic_test5
+folders respectively.
+
+To gather more data, I am also going to rerun another RAT with 5 iterations each.
+This test should allow me enough time to catch up on some other papers that I am
+working on in parallel, as well as give us additional SEU data. You can never have
+too much!
+
+
+
+
+
+

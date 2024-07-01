@@ -1,0 +1,1178 @@
+Starting GXLD test...
+Iteration 1 of 30
+Fri 23 Feb 2024 12:31:44 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648304
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 43.4463
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 2 of 30
+Fri 23 Feb 2024 12:31:46 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648306
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 38.9472
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 3 of 30
+Fri 23 Feb 2024 12:31:47 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648307
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 40.293
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 4 of 30
+Fri 23 Feb 2024 12:31:49 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648309
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 42.9676
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 5 of 30
+Fri 23 Feb 2024 12:31:50 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648310
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 48.3567
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 23: mismatch in distances: res = (idx = 22845, val = 509, is_valid = 1), ref = (idx = 22845, val = 905, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 6 of 30
+Fri 23 Feb 2024 12:31:52 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648312
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 46.3411
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 19: mismatch in distances: res = (idx = 22845, val = 500, is_valid = 1), ref = (idx = 22845, val = 980, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 7 of 30
+Fri 23 Feb 2024 12:31:53 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648313
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 50.2475
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 17: mismatch in distances: res = (idx = 22845, val = 498, is_valid = 1), ref = (idx = 22845, val = 1016, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 8 of 30
+Fri 23 Feb 2024 12:31:55 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648315
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 46.8063
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 31: mismatch in distances: res = (idx = 22845, val = 31, is_valid = 1), ref = (idx = 22845, val = 1068, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 9 of 30
+Fri 23 Feb 2024 12:31:56 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648316
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 48.702
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 25: mismatch in distances: res = (idx = 22845, val = 6, is_valid = 1), ref = (idx = 22845, val = 1058, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 10 of 30
+Fri 23 Feb 2024 12:31:58 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648318
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 49.2516
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 17: mismatch in distances: res = (idx = 22845, val = 506, is_valid = 1), ref = (idx = 22845, val = 1056, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 11 of 30
+Fri 23 Feb 2024 12:31:59 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648319
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.4487
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 13: mismatch in distances: res = (idx = 22845, val = 477, is_valid = 1), ref = (idx = 22845, val = 979, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 12 of 30
+Fri 23 Feb 2024 12:32:01 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648321
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.551
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 13: mismatch in distances: res = (idx = 22845, val = 505, is_valid = 1), ref = (idx = 22845, val = 1046, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 13 of 30
+Fri 23 Feb 2024 12:32:02 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648322
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 48.8164
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 13: mismatch in distances: res = (idx = 22845, val = 59, is_valid = 1), ref = (idx = 22845, val = 1115, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 14 of 30
+Fri 23 Feb 2024 12:32:04 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648324
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 48.2253
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 20: mismatch in distances: res = (idx = 22845, val = 470, is_valid = 1), ref = (idx = 22845, val = 1030, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 15 of 30
+Fri 23 Feb 2024 12:32:05 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648325
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 45.9761
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 26: mismatch in distances: res = (idx = 22845, val = 482, is_valid = 1), ref = (idx = 22845, val = 977, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 16 of 30
+Fri 23 Feb 2024 12:32:07 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648327
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.104
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 20: mismatch in distances: res = (idx = 22845, val = 46, is_valid = 1), ref = (idx = 22845, val = 1059, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 17 of 30
+Fri 23 Feb 2024 12:32:08 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648328
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.2944
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 10: mismatch in distances: res = (idx = 22845, val = 484, is_valid = 1), ref = (idx = 22845, val = 1012, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 18 of 30
+Fri 23 Feb 2024 12:32:10 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648330
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 46.1929
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 26: mismatch in distances: res = (idx = 22845, val = 46, is_valid = 1), ref = (idx = 22845, val = 1022, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 19 of 30
+Fri 23 Feb 2024 12:32:11 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648331
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.3414
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 12: mismatch in distances: res = (idx = 22845, val = 11, is_valid = 1), ref = (idx = 22845, val = 1045, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 20 of 30
+Fri 23 Feb 2024 12:32:12 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648332
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 50.5109
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 16: mismatch in distances: res = (idx = 22845, val = 8, is_valid = 1), ref = (idx = 22845, val = 1032, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 21 of 30
+Fri 23 Feb 2024 12:32:14 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648334
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 49.2716
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 21: mismatch in distances: res = (idx = 22845, val = 498, is_valid = 1), ref = (idx = 22845, val = 979, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 22 of 30
+Fri 23 Feb 2024 12:32:15 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648335
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 49.3115
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 16: mismatch in distances: res = (idx = 22845, val = 0, is_valid = 1), ref = (idx = 22845, val = 1028, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 23 of 30
+Fri 23 Feb 2024 12:32:17 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648337
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.151
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 19: mismatch in distances: res = (idx = 22845, val = 36, is_valid = 1), ref = (idx = 22845, val = 1097, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 24 of 30
+Fri 23 Feb 2024 12:32:18 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648338
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.9671
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 30: mismatch in distances: res = (idx = 22845, val = 471, is_valid = 1), ref = (idx = 22845, val = 998, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 25 of 30
+Fri 23 Feb 2024 12:32:20 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648340
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 46.3429
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 23: mismatch in distances: res = (idx = 22845, val = 30, is_valid = 1), ref = (idx = 22845, val = 1031, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 26 of 30
+Fri 23 Feb 2024 12:32:21 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648341
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 49.7794
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 18: mismatch in distances: res = (idx = 22845, val = 103, is_valid = 1), ref = (idx = 22845, val = 1070, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 27 of 30
+Fri 23 Feb 2024 12:32:23 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648343
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.1496
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 16: mismatch in distances: res = (idx = 22845, val = 480, is_valid = 1), ref = (idx = 22845, val = 975, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 28 of 30
+Fri 23 Feb 2024 12:32:24 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648344
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 51.6446
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 12: mismatch in distances: res = (idx = 22845, val = 505, is_valid = 1), ref = (idx = 22845, val = 982, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 29 of 30
+Fri 23 Feb 2024 12:32:26 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648346
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.8271
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 22: mismatch in distances: res = (idx = 22845, val = 21, is_valid = 1), ref = (idx = 22845, val = 1045, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+Iteration 30 of 30
+Fri 23 Feb 2024 12:32:27 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708648347
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 47.5715
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+q = 0, e = 11: mismatch in distances: res = (idx = 22845, val = 24, is_valid = 1), ref = (idx = 22845, val = 1017, is_valid = 0)
+Test FAILED
+Saving arrays as Numpy array files
+Done
+GSI Leda-G SSH
+Starting................
+Version: 100.12.0.1.1000.25
+Not Connected
+> init ok
+[1m[33mslot0[0m {'Apuc_Mask': '0xf', 'Dev_Name': 'dev-8600', 'FW Status': 'background', 'File_Name': '/dev/apu/mngt/m00', 'Log_State': 'File', 'Mac': '60:41', 'Mem_Size': '15027142656', 'Version': '120.12.300.3'}
+{'Apuc_Mask': '0xf', 'Dev_Name': 'dev-8600', 'FW Status': 'background', 'File_Name': '/dev/apu/mngt/m00', 'Log_State': 'File', 'Mac': '60:41', 'Mem_Size': '15027142656', 'Version': '120.12.300.3'}
+Connected
+flf
+quit
+Test complete.

@@ -1,1 +1,0 @@
-query 0 has fewer than k - g outputs (k = 64, g = 32, num_outputs = 31)

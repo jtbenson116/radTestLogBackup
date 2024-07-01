@@ -1,0 +1,684 @@
+Starting GXLD test...
+Iteration 1 of 30
+Fri 23 Feb 2024 12:19:45 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647585
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Iteration 2 of 30
+Fri 23 Feb 2024 12:19:45 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647585
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Iteration 3 of 30
+Fri 23 Feb 2024 12:19:59 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647599
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 41.6172
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 4 of 30
+Fri 23 Feb 2024 12:20:01 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647601
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 41.5715
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 5 of 30
+Fri 23 Feb 2024 12:20:02 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647602
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 41.8908
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 6 of 30
+Fri 23 Feb 2024 12:20:04 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647604
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 42.0583
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 7 of 30
+Fri 23 Feb 2024 12:20:05 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647605
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 36.4842
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 8 of 30
+Fri 23 Feb 2024 12:20:07 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647607
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 40.7276
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 9 of 30
+Fri 23 Feb 2024 12:20:08 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647608
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 39.0474
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 10 of 30
+Fri 23 Feb 2024 12:20:10 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647610
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 40.6515
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 11 of 30
+Fri 23 Feb 2024 12:20:11 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647611
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 36.6319
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 12 of 30
+Fri 23 Feb 2024 12:20:13 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647613
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 39.6554
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 13 of 30
+Fri 23 Feb 2024 12:20:14 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647614
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 37.0657
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 14 of 30
+Fri 23 Feb 2024 12:20:15 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647615
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 42.1879
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 15 of 30
+Fri 23 Feb 2024 12:20:17 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647617
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 40.6777
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 16 of 30
+Fri 23 Feb 2024 12:20:18 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647618
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 36.0312
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 17 of 30
+Fri 23 Feb 2024 12:20:20 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647620
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 35.3105
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 18 of 30
+Fri 23 Feb 2024 12:20:21 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647621
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...
+Searches complete: Wall clock time passed (ms) = 40.3061
+Calculating reference ...
+Checking results for apuc 0 ...
+Finished checking results for apuc 0.
+Checking results for apuc 1 ...
+Finished checking results for apuc 1.
+Checking results for apuc 2 ...
+Finished checking results for apuc 2.
+Checking results for apuc 3 ...
+Finished checking results for apuc 3.
+Test PASSED
+Done
+Iteration 19 of 30
+Fri 23 Feb 2024 12:20:23 AM UTC
+************** ENV ARGS ******************
+
+Using first available board
+SEED = 1708647623
+REF_INCREMENT = 1
+******************************************
+
+****************** ARGS ******************
+num_features = 192
+num_queries = 500
+num_records = 32768
+num_queries_per_batch = 256
+k = 64
+g = 32
+num_threads = 4
+******************************************
+
+Num Contexts = 1
+Name = dev-8600
+Memory Size = 13G
+Num Apucs = 4
+Constantly mapped memory = 0.206054G
+Dynamically mapped memory = 13.7451G
+Performing searches ...

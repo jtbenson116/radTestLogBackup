@@ -1,0 +1,6 @@
+(base) diego@demo1:~/LANSCE/gxld$ dev_diagnostic >> dev_diagnostic_log.txt
+GSI-LOG: run_init_task() - ret = ETIMEDOUT. gdl_schedule_batch() timeout, reset APU
+GSI-LOG: gdl_context_free_and_reset(): ret value of ioctl() - 0
+GSI-LOG: gdl_context_free_and_reset(): ret value of gdl_context_free() - 0
+GSI-LOG: run_init_task() - ret = EAGAIN. gdl_context_free_and_reset()
+GSI-LOG:   FATAL: dev-diagnostic.c:584:                        main: gdl_context_alloc(contexts_desc[0].ctx_id)  ,ret = -11

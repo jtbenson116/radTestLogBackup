@@ -102,12 +102,18 @@ GAL_TASK_ENTRY_POINT(add_vrs_task, in, out){
     
     enum gvml_vr16 A_vr, B_vr, X_vr;
 
-
+    /*
     // We should probably alternate which VRs we use every
     // iteration as well.
     A_vr = GVML_VR16_0;
     B_vr = GVML_VR16_1;
     X_vr = GVML_VR16_2;
+    */
+    // LANSCE Patch to shuffle which GVML_VR16s are being used.
+    A_vr = vr_idx_a % 15;
+    B_vr = vr_idx_b % 15;
+    X_vr = vr_idx_x % 15;
+    
     
     // OPTIONAL: Flush cache to make sure we are getting fresh data every time.
     gal_fast_cache_dcache_invalidate_and_flush();

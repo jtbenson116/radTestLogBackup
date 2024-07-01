@@ -38,6 +38,8 @@ GDL_TASK_DECLARE(read_l1_task);
 enum { NUM_CTXS = 1 };
 enum { VR_SIZE = 32768 };
 
+
+
 /*
  *
  */
@@ -57,7 +59,7 @@ int printMatrix(uint16_t* A, int m, int n){
 int prevRun = 0;
 int masterRunIdx = 0;
 void writeLog(int max_iters, int iter_count, int vm_idx, int num_vmrs, int x_not_ok,
-	      bool* err_mask, uint16_t* in1, uint16_t* out1){
+	      bool* err_mask, uint16_t* in1, uint16_t* out1, time_t starttime){
     // TEST LOGGING ----------------------------------------------------------------------------
     // This could probably be its own function
     // Write test info to an output log
@@ -74,6 +76,8 @@ void writeLog(int max_iters, int iter_count, int vm_idx, int num_vmrs, int x_not
     // We determine the run number by how many files are already in the directory,
     // so to start at run1 we should subtract out the 9 files that will always be in
     // the directory, including '.' and '..'
+    // NOTE: if this is run from any other directory, the log naming scheme
+    // will probably be messed up.
     numLogFiles = numLogFiles - 9;
     if(masterRunIdx == 0)
 	masterRunIdx = numLogFiles;
@@ -90,8 +94,22 @@ void writeLog(int max_iters, int iter_count, int vm_idx, int num_vmrs, int x_not
     strcat(fname, datetime);
     // Open the log file
     log = fopen(fname, "w");
+
     fprintf(log,"[SECTION] Log generated on ");
     fprintf(log,"%s", asctime(tm));
+    fprintf(log,"(epoch time): ");
+    fprintf(log,"%ld\n", t);
+
+    
+    
+    struct tm * starttm = localtime(&starttime);
+    fprintf(log,"Test started at ");
+    fprintf(log,"%s", asctime(tm));
+
+    fprintf(log,"(epoch time): ");
+    fprintf(log,"%ld\n", starttime);
+
+
     if(prevRun != 0)
 	fprintf(log, "Continuation from previous: run %d, log %d\n", masterRunIdx, prevRun);
     prevRun = numLogFiles;
@@ -156,7 +174,8 @@ void writeLog(int max_iters, int iter_count, int vm_idx, int num_vmrs, int x_not
 
 // This method is for launching the APU tasks 
 int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
-		uint16_t num_vrs, uint16_t max_iters){
+		uint16_t num_vrs, uint16_t max_iters,
+		time_t starttime){
     int ret=0;
 
     // allocate common struct and derefence to host pointer
@@ -243,7 +262,7 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 	    }
 	    if(userInput == 's'){
 		writeLog(max_iters,  iter_count, vm_idx, num_vrs, x_not_ok,
-			 err_mask, in1, out1);
+			 err_mask, in1, out1, starttime);
 		//printf("Log written\n");
 		printf("Test paused, press 'q' to quit, 'd' to reload, or 'k' to continue...\n");
 		scanf("%s", &userInput);
@@ -351,12 +370,15 @@ int run_l1_serr(gdl_context_handle_t ctx_id, uint16_t *out1, uint16_t *in1,
 	    break;
 	}
 
+	writeLog(max_iters,  iter_count,  vm_idx, num_vrs, x_not_ok,
+		 err_mask, in1, out1, starttime);
+
 	// We can use this to pause after every iteration if we want.
     }// end while
     // END MAIN LOOP -------------------------------------------------------------------------------
     
     writeLog(max_iters,  iter_count,  vm_idx, num_vrs, x_not_ok,
-	     err_mask, in1, out1);
+	     err_mask, in1, out1, starttime);
 
  CLEANUP:
     // Free memory handles
@@ -390,6 +412,9 @@ static struct gsi_sim_contexts g_ctxs[NUM_CTXS] = {
 
 
 int main(int GSI_UNUSED(argc), char *argv[]){
+
+    time_t starttime = time(NULL);
+
     int ret = 0;
     unsigned int num_ctxs;
     struct gdl_context_desc contexts_desc[GDL_MAX_NUM_CONTEXTS];
@@ -451,7 +476,8 @@ int main(int GSI_UNUSED(argc), char *argv[]){
 	}
 	// This is the actual task launcher call
 	printf("Running on card number %u\n", ctx_id);
-	ret = run_l1_serr(contexts_desc[ctx_id].ctx_id, x, a, num_vrs, max_iters);
+	ret = run_l1_serr(contexts_desc[ctx_id].ctx_id, x, a, num_vrs, max_iters,
+			  starttime);
 	gdl_context_free(contexts_desc[ctx_id].ctx_id);
 	break;
     }

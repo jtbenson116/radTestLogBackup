@@ -30,10 +30,9 @@
 	-Hrgf_banked_regs=32
 	-HL
 	-Xcode_density
-	-Xdiv_rem=radix4
 	-Xswap
 	-Xbitscan
-	-Xmpy_option=mac
+	-Xmpy_option=none
 	-Xshift_assist
 	-Xbarrel_shifter
 	-Xtimer0
@@ -1359,16 +1358,14 @@
   </configuration>
   <configuration name="gcc_compiler" filename="gcc.arg">
     <string><![CDATA[
-	-mcpu=archs
-	-mcode-density
-	-mrgf-banked-regs=32
+	-mcpu=hs
 	-mlittle-endian
-	-matomic
-	-mll64
-	-mdiv-rem
+	-mno-atomic
+	-mno-ll64
+	-mno-div-rem
 	-mswap
 	-mnorm
-	-mmpy-option=plus_dmpy
+	-mmpy-option=0
 	-mbarrel-shifter
 	--param l1-cache-size=32768
 	--param l1-cache-line-size=32

@@ -8,7 +8,7 @@ static const struct gsi_module_loader_metadata md = {
 
 	.data_seg_addr = 0x300000,
 
-	.mem_size = 0x30e058,
+	.mem_size = 0x30da58,
 	.real_data_seg_addr = 0x300000,
 	.text_addr = 0x1020,
 
@@ -16,16 +16,16 @@ static const struct gsi_module_loader_metadata md = {
 	.relent = 0x0,
 	.relsz = 0x0,
 
-	.rodata_addr = 0x300e80,
+	.rodata_addr = 0x300880,
 	.data_relro_addr = 0x0,
-	.data_addr = 0x303800,
-	.bss_addr = 0x303e10,
+	.data_addr = 0x303200,
+	.bss_addr = 0x303810,
 
 	.init_addr = 0x1010,
 	.init_array_addr = 0x0,
 	.init_array_size = 0x0,
 
-	.valufrag_addr = 0x50be20,
+	.valufrag_addr = 0x50a070,
 	.valufrag_size = 0xf0,
 };
 
@@ -39,9 +39,9 @@ static const struct gsi_module module = {
 };
 const struct gsi_module *gsi_module = &module;
 
-static const uint32_t add_vrs_task = 0x50af1c;
+static const uint32_t add_vrs_task = 0x508e60;
 const uint32_t *GSI_TASK_add_vrs_task = &add_vrs_task;
 
-static const uint32_t _gsi_apuc_init = 0x5010dc;
+static const uint32_t _gsi_apuc_init = 0x5010d0;
 const uint32_t *GSI_TASK__gsi_apuc_init = &_gsi_apuc_init;
 
